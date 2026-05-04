@@ -1,36 +1,44 @@
 body {
-    background-color: #f5f0eb;
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #f5f0eb, #e8dcd3);
     text-align: center;
 }
 
-/* TÍTULO */
-h1 {
-    color: #5a0f2e;
-    margin-bottom: 5px;
+/* HEADER */
+.header {
+    background-color: #5a0f2e;
+    color: white;
+    padding: 30px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-p {
-    color: #333;
+.header h1 {
+    margin: 0;
+    font-size: 28px;
 }
 
-/* SUBTÍTULOS */
-h2 {
-    margin-top: 30px;
-    color: #5a0f2e;
+.header p {
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* SECCIONES */
+.section {
+    margin-top: 25px;
 }
 
 /* TARJETAS */
 .card {
     background-color: white;
-    padding: 15px;
-    margin: 20px auto;
+    padding: 20px;
+    margin: 15px auto;
     width: 90%;
-    max-width: 400px;
+    max-width: 420px;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
 
@@ -38,7 +46,7 @@ h2 {
 input, textarea {
     width: 90%;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 14px;
 }
@@ -48,18 +56,19 @@ button {
     background-color: #5a0f2e;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 10px 18px;
+    border-radius: 10px;
     font-size: 14px;
+    cursor: pointer;
 }
 
-/* EFECTO HOVER (cuando pasas el dedo/mouse) */
 button:hover {
     background-color: #7a1b44;
 }
 
-/* LISTAS */
-ul {
-    padding-left: 20px;
+/* IA RESULTADO */
+#resultadoIA {
+    margin-top: 15px;
+    font-style: italic;
+    color: #5a0f2e;
 }
