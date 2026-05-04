@@ -106,3 +106,14 @@ function recomendarVino() {
 /* INICIO */
 cargarResenas();
 cargarNombre();
+function guardarHistorialIA() {
+    localStorage.setItem("historialIA", JSON.stringify(historialIA));
+}
+
+function cargarHistorialIA() {
+    let datos = localStorage.getItem("historialIA");
+
+    if (datos) {
+        historialIA = JSON.parse(datos);
+    }
+}
