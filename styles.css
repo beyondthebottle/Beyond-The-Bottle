@@ -7,44 +7,54 @@ body {
 }
 
 /* HERO */
+/* HERO REAL PREMIUM */
 .hero {
-    height: 75vh;
-    background-image: url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb");
+    height: 90vh;
+    background-image: url("https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea");
     background-size: cover;
     background-position: center;
-    display: flex;
+    position: relative;
 }
 
-/* CAPA OSCURA */
-.overlay {
-    background: rgba(60, 0, 30, 0.6); /* burdeo oscuro */
-    width: 100%;
+/* CAPA OSCURA (efecto lujo) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(
+        rgba(60, 0, 30, 0.75),
+        rgba(20, 0, 10, 0.85)
+    );
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* TEXTO CENTRADO */
+/* CONTENIDO CENTRADO */
 .hero-content {
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
-/* TÍTULO */
-.hero h1 {
+/* TÍTULO GRANDE */
+.hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 64px;
+    font-size: 72px;
     margin: 0;
     letter-spacing: 2px;
 }
 
 /* SUBTÍTULO */
-.hero p {
-    font-size: 18px;
-    margin-top: 10px;
+.hero-content p {
+    font-size: 20px;
+    margin-top: 15px;
     opacity: 0.9;
 }
-
 /* CONTENEDOR */
 .container {
     width: 85%;
