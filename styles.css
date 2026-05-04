@@ -2,43 +2,47 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #f3efec;
-    color: #2b2b2b;
+    background-color: #f5f2ef;
+    color: #2c2c2c;
 }
 
-/* HERO (PORTADA PREMIUM) */
+/* HERO */
 .hero {
-    height: 70vh;
-    background-image: url("https://share.google/g5xizexOo7p70ITlZ");
+    height: 75vh;
+    background-image: url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb");
     background-size: cover;
     background-position: center;
-    position: relative;
+    display: flex;
 }
 
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    height: 100%;
+/* CAPA OSCURA */
+.overlay {
+    background: rgba(60, 0, 30, 0.6); /* burdeo oscuro */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* TEXTO CENTRADO */
 .hero-content {
     text-align: center;
     color: white;
 }
 
+/* TÍTULO */
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 60px;
+    font-size: 64px;
     margin: 0;
     letter-spacing: 2px;
 }
 
+/* SUBTÍTULO */
 .hero p {
-    margin-top: 10px;
     font-size: 18px;
-    opacity: 0.85;
+    margin-top: 10px;
+    opacity: 0.9;
 }
 
 /* CONTENEDOR */
@@ -67,14 +71,14 @@ h2 {
     background: white;
     padding: 25px;
     border-radius: 15px;
+    margin-top: 15px;
     box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
 }
 
-/* HOVER PREMIUM */
+/* HOVER */
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 15px 35px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
 }
 
 /* INPUTS */
@@ -86,23 +90,20 @@ input, textarea {
     border: 1px solid #ddd;
 }
 
-/* BOTONES PREMIUM */
+/* BOTONES */
 button {
     margin-top: 12px;
     padding: 12px;
     width: 100%;
     border-radius: 10px;
     border: none;
-    background: linear-gradient(135deg, #5a0f2e, #7a1b44);
+    background: #5a0f2e;
     color: white;
-    font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.03);
-    background: linear-gradient(135deg, #7a1b44, #9c2a5a);
+    background: #7a1b44;
 }
 
 /* IA */
@@ -110,11 +111,6 @@ button:hover {
     margin-top: 15px;
     font-style: italic;
     color: #5a0f2e;
-}
-
-/* RESEÑAS */
-#contenedorResenas .card {
-    margin-top: 15px;
 }
 
 /* RESPONSIVE */
