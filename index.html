@@ -2,6 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTE ELEGANTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet">
+
     <title>Beyond the Bottle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -9,50 +16,64 @@
 <body>
 
     <!-- HEADER -->
-    <div class="header">
-        <h1>Beyond the Bottle 🍷</h1>
-        <p>Descubre el mundo del vino de forma simple y elegante</p>
-    </div>
+    <header class="header">
+        <div class="container">
+            <h1>Beyond the Bottle</h1>
+            <p>Descubre el mundo del vino de forma elegante</p>
+        </div>
+    </header>
 
-    <!-- LECCIÓN -->
-    <h2 class="section">📚 Lección 1</h2>
+    <main class="container">
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03" 
-             style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <!-- GRID -->
+        <div class="grid">
 
-        <p>El vino puede ser:</p>
-        <ul style="text-align:left;">
-            <li>Tinto</li>
-            <li>Blanco</li>
-            <li>Rosado</li>
-        </ul>
-    </div>
+            <!-- IZQUIERDA -->
+            <div class="col">
 
-    <!-- RESEÑAS -->
-    <h2 class="section">⭐ Reseñas de la comunidad</h2>
+                <h2>📚 Aprende</h2>
 
-    <div class="card">
-        <input type="text" id="nombre" placeholder="Tu nombre"><br><br>
-        <button onclick="guardarNombre()">Guardar nombre</button><br><br>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03">
+                    <p>El vino puede ser:</p>
+                    <ul>
+                        <li>Tinto</li>
+                        <li>Blanco</li>
+                        <li>Rosado</li>
+                    </ul>
+                </div>
 
-        <textarea id="comentario" placeholder="Escribe tu opinión"></textarea><br><br>
-        <button onclick="agregarResena()">Publicar</button>
-    </div>
+                <h2>🤖 IA</h2>
 
-    <div id="contenedorResenas"></div>
+                <div class="card">
+                    <input type="text" id="preferencia" placeholder="Ej: algo dulce o para carne">
+                    <button onclick="recomendarVino()">Recomendar</button>
+                    <p id="resultadoIA"></p>
+                </div>
 
-    <!-- IA -->
-    <h2 class="section">🤖 Recomendador de vinos</h2>
+            </div>
 
-    <div class="card">
-        <input type="text" id="preferencia" placeholder="Ej: algo dulce o para carne"><br><br>
-        <button onclick="recomendarVino()">Recomendar</button>
+            <!-- DERECHA -->
+            <div class="col">
 
-        <p id="resultadoIA"></p>
-    </div>
+                <h2>⭐ Comunidad</h2>
 
-    <!-- SCRIPT -->
+                <div class="card">
+                    <input type="text" id="nombre" placeholder="Tu nombre">
+                    <button onclick="guardarNombre()">Guardar nombre</button>
+
+                    <textarea id="comentario" placeholder="Escribe tu opinión"></textarea>
+                    <button onclick="agregarResena()">Publicar</button>
+                </div>
+
+                <div id="contenedorResenas"></div>
+
+            </div>
+
+        </div>
+
+    </main>
+
     <script src="script.js"></script>
 
 </body>
