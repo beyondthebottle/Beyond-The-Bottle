@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Beyond the Bottle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Beyond the Bottle 🍷</h1>
+    <p>Aprende, explora y comparte el mundo del vino</p>
+
+    <hr>
+
+    <!-- LECCIÓN -->
+    <div class="card">
+        <h2>📚 Lección 1</h2>
+        <p>El vino puede ser:</p>
+        <ul style="text-align:left;">
+            <li>Tinto</li>
+            <li>Blanco</li>
+            <li>Rosado</li>
+        </ul>
+    </div>
+
+    <!-- FORMULARIO -->
+    <h2>⭐ Reseñas de la comunidad</h2>
+
+    <div class="card">
+        <input type="text" id="nombre" placeholder="Tu nombre"><br><br>
+        <button onclick="guardarNombre()">Guardar nombre</button><br><br>
+
+        <textarea id="comentario" placeholder="Escribe tu opinión"></textarea><br><br>
+        <button onclick="agregarResena()">Publicar</button>
+    </div>
+
+    <!-- CONTENEDOR -->
+    <div id="contenedorResenas"></div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
