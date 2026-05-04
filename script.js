@@ -81,3 +81,22 @@ function cargarNombre() {
 
 cargarResenas();
 cargarNombre();
+function recomendarVino() {
+    let texto = document.getElementById("preferencia").value.toLowerCase();
+    let resultado = "";
+
+    if (texto.includes("dulce")) {
+        resultado = "Te recomendamos un vino Moscato 🍇";
+    } 
+    else if (texto.includes("carne")) {
+        resultado = "Te recomendamos un Cabernet Sauvignon 🍷";
+    } 
+    else if (texto.includes("suave")) {
+        resultado = "Te recomendamos un Pinot Noir 🍷";
+    } 
+    else {
+        resultado = "Te recomendamos explorar un vino tinto clásico 🍷";
+    }
+
+    document.getElementById("resultadoIA").innerText = resultado;
+}
