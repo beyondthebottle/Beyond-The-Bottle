@@ -24,16 +24,9 @@
         </ul>
     </div>
 
-    <!-- FORMULARIO -->
+    <!-- RESEÑAS -->
     <h2>⭐ Reseñas de la comunidad</h2>
-<h2>🤖 Recomendador de vinos</h2>
 
-<div class="card">
-    <input type="text" id="preferencia" placeholder="Ej: algo dulce o para carne"><br><br>
-    <button onclick="recomendarVino()">Recomendar</button>
-
-    <p id="resultadoIA"></p>
-</div>
     <div class="card">
         <input type="text" id="nombre" placeholder="Tu nombre"><br><br>
         <button onclick="guardarNombre()">Guardar nombre</button><br><br>
@@ -42,8 +35,17 @@
         <button onclick="agregarResena()">Publicar</button>
     </div>
 
-    <!-- CONTENEDOR -->
     <div id="contenedorResenas"></div>
+
+    <!-- IA -->
+    <h2>🤖 Recomendador de vinos</h2>
+
+    <div class="card">
+        <input type="text" id="preferencia" placeholder="Ej: algo dulce o para carne"><br><br>
+        <button onclick="recomendarVino()">Recomendar</button>
+
+        <p id="resultadoIA"></p>
+    </div>
 
     <!-- SCRIPT -->
     <script src="script.js"></script>
