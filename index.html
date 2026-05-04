@@ -2,8 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-
-    <!-- RESPONSIVE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FUENTES -->
@@ -15,37 +13,31 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HERO -->
     <header class="hero">
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <h1>Beyond the Bottle</h1>
-            <p>Explora el vino como nunca antes</p>
+        <div class="overlay">
+            <div class="hero-content">
+                <h1>Beyond the Bottle</h1>
+                <p>Explora el vino como nunca antes</p>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <main class="container">
 
         <div class="grid">
 
-            <!-- COLUMNA IZQUIERDA -->
-            <div class="col">
-
+            <!-- IZQUIERDA -->
+            <div>
                 <h2>📚 Aprende</h2>
 
                 <div class="card">
-
-                    <!-- IMAGEN CONTROLADA -->
-                    <div class="hero-img"></div>
-
                     <p>El vino puede ser:</p>
                     <ul>
                         <li>Tinto</li>
                         <li>Blanco</li>
                         <li>Rosado</li>
                     </ul>
-
                 </div>
 
                 <h2>🤖 IA</h2>
@@ -55,12 +47,10 @@
                     <button onclick="recomendarVino()">Recomendar</button>
                     <p id="resultadoIA"></p>
                 </div>
-
             </div>
 
-            <!-- COLUMNA DERECHA -->
-            <div class="col">
-
+            <!-- DERECHA -->
+            <div>
                 <h2>⭐ Comunidad</h2>
 
                 <div class="card">
@@ -72,7 +62,6 @@
                 </div>
 
                 <div id="contenedorResenas"></div>
-
             </div>
 
         </div>
