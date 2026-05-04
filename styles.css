@@ -1,19 +1,25 @@
-/* BASE */
+/* RESET */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #f5f2ef;
     color: #2c2c2c;
 }
+
+/* ========================= */
+/* HERO PREMIUM (PORTADA) */
+/* ========================= */
+
 .hero {
     height: 90vh;
     background-image: url("https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 }
 
-/* CAPA OSCURA (efecto lujo) */
+/* CAPA OSCURA */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -23,7 +29,7 @@ body {
 
     background: linear-gradient(
         rgba(60, 0, 30, 0.75),
-        rgba(20, 0, 10, 0.85)
+        rgba(20, 0, 10, 0.9)
     );
 
     display: flex;
@@ -31,14 +37,13 @@ body {
     justify-content: center;
 }
 
-/* CONTENIDO CENTRADO */
+/* TEXTO HERO */
 .hero-content {
     text-align: center;
     color: white;
     padding: 20px;
 }
 
-/* TÍTULO GRANDE */
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 72px;
@@ -46,21 +51,24 @@ body {
     letter-spacing: 2px;
 }
 
-/* SUBTÍTULO */
 .hero-content p {
     font-size: 20px;
     margin-top: 15px;
     opacity: 0.9;
 }
-/* CONTENEDOR */
+
+/* ========================= */
+/* CONTENIDO */
+/* ========================= */
+
 .container {
     width: 85%;
     max-width: 1200px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
-/* GRID */
+/* GRID ESCRITORIO */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -71,6 +79,7 @@ body {
 h2 {
     font-family: 'Playfair Display', serif;
     color: #5a0f2e;
+    margin-bottom: 10px;
 }
 
 /* TARJETAS */
@@ -85,7 +94,8 @@ h2 {
 
 /* HOVER */
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0px 15px 35px rgba(0,0,0,0.12);
 }
 
 /* INPUTS */
@@ -95,6 +105,7 @@ input, textarea {
     padding: 12px;
     border-radius: 10px;
     border: 1px solid #ddd;
+    font-size: 14px;
 }
 
 /* BOTONES */
@@ -104,13 +115,16 @@ button {
     width: 100%;
     border-radius: 10px;
     border: none;
-    background: #5a0f2e;
+    background: linear-gradient(135deg, #5a0f2e, #7a1b44);
     color: white;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: #7a1b44;
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #7a1b44, #9c2a5a);
 }
 
 /* IA */
@@ -120,17 +134,26 @@ button:hover {
     color: #5a0f2e;
 }
 
+/* RESEÑAS */
+#contenedorResenas .card {
+    margin-top: 15px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .hero {
-        height: 50vh;
+        height: 55vh;
     }
 
-    .hero h1 {
+    .hero-content h1 {
         font-size: 36px;
     }
 
     .grid {
         grid-template-columns: 1fr;
     }
-}
+
+    .container {
+        width: 90%;
+    }
+} 
