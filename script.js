@@ -1,4 +1,7 @@
 let reseñas = [];
+let historialIA = [];
+
+/* ---------------- RESEÑAS ---------------- */
 
 function guardarEnMemoria() {
     localStorage.setItem("resenas", JSON.stringify(reseñas));
@@ -59,6 +62,8 @@ function darLike(index) {
     mostrarResenas();
 }
 
+/* ---------------- PERFIL ---------------- */
+
 function guardarNombre() {
     let nombre = document.getElementById("nombre").value;
 
@@ -79,33 +84,8 @@ function cargarNombre() {
     }
 }
 
-/* IA */
-function recomendarVino() {
-    let texto = document.getElementById("preferencia").value.toLowerCase();
-    let resultado = "";
+/* ---------------- HISTORIAL IA ---------------- */
 
-    if (texto.includes("dulce")) {
-        resultado = "Te recomendamos un vino Moscato 🍇 (ligero y dulce)";
-    } 
-    else if (texto.includes("carne")) {
-        resultado = "Te recomendamos un Cabernet Sauvignon 🍷 (ideal para carnes)";
-    } 
-    else if (texto.includes("suave")) {
-        resultado = "Te recomendamos un Pinot Noir 🍷 (ligero y elegante)";
-    } 
-    else if (texto.includes("fresco")) {
-        resultado = "Te recomendamos un Sauvignon Blanc 🥂 (refrescante)";
-    } 
-    else {
-        resultado = "Te recomendamos explorar un vino tinto clásico 🍷";
-    }
-
-    document.getElementById("resultadoIA").innerText = resultado;
-}
-
-/* INICIO */
-cargarResenas();
-cargarNombre();
 function guardarHistorialIA() {
     localStorage.setItem("historialIA", JSON.stringify(historialIA));
 }
@@ -117,3 +97,45 @@ function cargarHistorialIA() {
         historialIA = JSON.parse(datos);
     }
 }
+
+/* ---------------- IA ---------------- */
+
+function recomendarVino() {
+    let texto = document.getElementById("preferencia").value.toLowerCase();
+    let resultado = "";
+
+    if (texto.includes("dulce")) {
+        resultado = "Te recomiendo un Moscato 🍇, ideal si te gustan los sabores dulces.";
+    } 
+    else if (texto.includes("carne")) {
+        resultado = "Un Cabernet Sauvignon 🍷 es perfecto para carnes.";
+    } 
+    else if (texto.includes("suave")) {
+        resultado = "Te sugiero un Pinot Noir 🍷, ligero y elegante.";
+    } 
+    else if (texto.includes("fresco")) {
+        resultado = "Un Sauvignon Blanc 🥂 es ideal si buscas algo refrescante.";
+    } 
+    else if (texto.includes("romantico") || texto.includes("cita")) {
+        resultado = "Para una ocasión romántica 💕, un rosé o espumante es perfecto.";
+    }
+    else {
+        resultado = "Te recomiendo explorar un vino tinto clásico 🍷 según tu ocasión.";
+    }
+
+    // Guardar historial
+    historialIA.push({
+        consulta: texto,
+        respuesta: resultado
+    });
+
+    guardarHistorialIA();
+
+    document.getElementById("resultadoIA").innerText = resultado;
+}
+
+/* ---------------- INICIO ---------------- */
+
+cargarResenas();
+cargarNombre();
+cargarHistorialIA();
