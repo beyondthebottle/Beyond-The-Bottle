@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Beyond the Bottle</title>
+
     <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet">
 
-    <title>Beyond the Bottle</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- HERO -->
+    <!-- HERO (PORTADA REAL) -->
     <header class="hero">
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <h1>Beyond the Bottle</h1>
-            <p>Explora el vino como nunca antes</p>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Beyond the Bottle</h1>
+                <p>Explora el vino como nunca antes</p>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
+
+    <!-- CONTENIDO -->
     <main class="container">
 
         <div class="grid">
 
-            <!-- IZQUIERDA -->
+            <!-- COLUMNA IZQUIERDA -->
             <div>
+
                 <h2>📚 Aprende</h2>
 
                 <div class="card">
@@ -46,10 +51,12 @@
                     <button onclick="recomendarVino()">Recomendar</button>
                     <p id="resultadoIA"></p>
                 </div>
+
             </div>
 
-            <!-- DERECHA -->
+            <!-- COLUMNA DERECHA -->
             <div>
+
                 <h2>⭐ Comunidad</h2>
 
                 <div class="card">
@@ -61,12 +68,14 @@
                 </div>
 
                 <div id="contenedorResenas"></div>
+
             </div>
 
         </div>
 
     </main>
 
+    <!-- SCRIPT -->
     <script src="script.js"></script>
 
 </body>
