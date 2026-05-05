@@ -9,7 +9,7 @@ body {
 
 /* HERO */
 .hero {
-    height: 90vh;
+    height: 85vh;
     background: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3') center/cover no-repeat;
     position: relative;
 }
@@ -18,10 +18,10 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(10, 5, 8, 0.7);
+    background: rgba(10, 5, 8, 0.75);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -33,16 +33,7 @@ body {
 
 .hero-content p {
     margin-top: 10px;
-    font-size: 18px;
-}
-
-.btn-hero {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: 1px solid #c9a3b3;
-    background: transparent;
-    color: #fff;
-    text-decoration: none;
+    opacity: 0.8;
 }
 
 /* CONTENEDOR */
@@ -52,14 +43,14 @@ body {
     padding: 60px 20px;
 }
 
-/* TIPOGRAFÍA */
-h2 {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
+/* INTRO */
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-h3 {
-    font-family: 'Inter', sans-serif;
+.intro h2 {
+    font-family: 'Playfair Display', serif;
 }
 
 /* BLOQUES */
@@ -67,51 +58,31 @@ h3 {
     margin-bottom: 60px;
 }
 
-/* CARDS */
+/* GRID DE VINOS */
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 15px;
 }
 
+/* CARD NAVEGABLE */
 .card {
-    background: #1a1216;
-    padding: 15px;
-    border: 1px solid #2a1b22;
-}
-
-/* TABLA */
-.tabla {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.tabla td, .tabla th {
-    border: 1px solid #2a1b22;
-    padding: 10px;
-}
-
-/* INPUTS */
-input {
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 10px;
+    display: block;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #e8e6e3;
     background: #1a1216;
     border: 1px solid #2a1b22;
-    color: white;
+    transition: 0.3s ease;
 }
 
-/* BOTONES */
-button {
-    padding: 10px 15px;
-    background: transparent;
-    border: 1px solid #c9a3b3;
-    color: white;
-    cursor: pointer;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #c9a3b3;
 }
 
-/* RESET */
-.reset-btn {
-    margin-top: 15px;
-    border: 1px solid #7a1f2b;
-}
+/* TITULOS INTERNOS */
+h2 {
+    font-family: 'Playfair Display', serif;
+}}
