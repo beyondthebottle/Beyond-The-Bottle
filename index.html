@@ -7,7 +7,7 @@
     <title>Beyond the Bottle</title>
 
     <!-- FUENTES -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -15,28 +15,30 @@
 
 <body>
 
-    <!-- HERO (PORTADA REAL) -->
+    <!-- HERO PREMIUM -->
     <header class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1>Beyond the Bottle</h1>
                 <p>Explora el vino como nunca antes</p>
+
+                <a href="#contenido" class="btn-hero">Comenzar experiencia</a>
             </div>
         </div>
     </header>
 
     <!-- CONTENIDO -->
-    <main class="container">
+    <main id="contenido" class="container">
 
         <div class="grid">
 
-            <!-- COLUMNA IZQUIERDA -->
-            <div>
+            <!-- IZQUIERDA -->
+            <section>
 
                 <h2>📚 Aprende</h2>
 
                 <div class="card">
-                    <p>El vino puede ser:</p>
+                    <h3>Tipos de vino</h3>
                     <ul>
                         <li>Tinto</li>
                         <li>Blanco</li>
@@ -44,39 +46,44 @@
                     </ul>
                 </div>
 
-                <h2>🤖 IA</h2>
+                <div class="card highlight">
+                    <h3>🌿 Cultura del vino</h3>
+                    <p>El vino no es solo bebida, es historia, territorio y expresión.</p>
+                </div>
+
+                <h2>🤖 Recomendador inteligente</h2>
 
                 <div class="card">
                     <input type="text" id="preferencia" placeholder="Ej: algo dulce o para carne">
-                    <button onclick="recomendarVino()">Recomendar</button>
+                    <button onclick="recomendarVino()">Recomendar vino</button>
                     <p id="resultadoIA"></p>
                 </div>
 
-            </div>
+            </section>
 
-            <!-- COLUMNA DERECHA -->
-            <div>
+            <!-- DERECHA -->
+            <section>
 
                 <h2>⭐ Comunidad</h2>
 
                 <div class="card">
                     <input type="text" id="nombre" placeholder="Tu nombre">
-                    <button onclick="guardarNombre()">Guardar nombre</button>
 
-                    <textarea id="comentario" placeholder="Escribe tu opinión"></textarea>
-                    <button onclick="agregarResena()">Publicar</button>
+                    <textarea id="comentario" placeholder="Comparte tu experiencia con este vino..."></textarea>
+
+                    <button onclick="agregarResena()">Publicar reseña</button>
                 </div>
 
-                <div id="contenedorResenas"></div>
+                <div id="contenedorResenas" class="reviews"></div>
 
-            </div>
+            </section>
 
         </div>
 
     </main>
 
-    <!-- SCRIPT -->
     <script src="script.js"></script>
 
 </body>
 </html>
+
