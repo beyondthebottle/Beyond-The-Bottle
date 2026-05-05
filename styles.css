@@ -44,7 +44,7 @@ body {
     font-family: var(--fancy-font);
     font-size: clamp(80px, 15vw, 150px);
     margin: 0;
-    line-height: 0.8;
+    line-height: 0.6;
     /* Dorado Metalizado */
     background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 50%, #8A6E2F 100%);
     -webkit-background-clip: text;
