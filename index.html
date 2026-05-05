@@ -4,59 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond the Bottle</title>
-    
-    <!-- Fuentes de Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    
-    <!-- ENLACE AL CSS (Verifica que el nombre coincida) -->
+    <!-- Fuentes: Inter, Playfair Display y Pinyon Script -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Beyond the Bottle</h1>
-            <p>Explora el mundo detrás del dulzor del vino</p>
+<header class="hero">
+    <div class="hero-content">
+        <h1>Beyond the Bottle</h1>
+        <p>Explora el mundo detrás del dulzor del vino</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <h2>Descubre el mundo del vino</h2>
+        <p>
+            Una plataforma educativa que explora estilos, aromas y estructuras del vino desde una perspectiva sensorial y moderna.
+        </p>
+    </section>
+
+    <!-- TIPOS DE VINO -->
+    <section>
+        <h2>Tipos de vino</h2>
+        <div class="cards">
+            <a class="card" href="tinto.html">Vino Tinto</a>
+            <a class="card" href="blanco.html">Vino Blanco</a>
+            <a class="card" href="rosado.html">Vino Rosado</a>
+            <a class="card" href="espumoso.html">Vino Espumoso</a>
+            <a class="card" href="postre.html">Vino de Postre</a>
+            <a class="card" href="fortificado.html">Vino Fortificado</a>
+            <a class="card" href="naranja.html">Vino Naranja</a>
         </div>
     </section>
 
-    <main class="container">
-        <section class="intro">
-            <h2>Nuestra Selección</h2>
-            <p class="intro-text">Sumérgete en una experiencia sensorial única, donde cada botella cuenta una historia de tierra, clima y tradición.</p>
-        </section>
-
-        <div class="cards">
-            <article class="card">
-                <h3>Vinos Tintos</h3>
-                <p>Cuerpo, carácter y notas profundas de frutos rojos y madera.</p>
-                <a href="#" class="link">Ver Colección →</a>
-            </article>
-
-            <article class="card">
-                <h3>Vinos Blancos</h3>
-                <p>Frescura, acidez equilibrada y aromas florales inolvidables.</p>
-                <a href="#" class="link">Ver Colección →</a>
-            </article>
-
-            <article class="card">
-                <h3>Maridaje Perfecto</h3>
-                <p>Aprende a combinar tus cepas favoritas con la gastronomía ideal.</p>
-                <a href="#" class="link">Leer Guía →</a>
-            </article>
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <h2>Suscripción</h2>
+        <div class="newsletter-form">
+            <input type="text" id="nombre" placeholder="Nombre completo">
+            <input type="email" id="correo" placeholder="Correo electrónico">
+            <button onclick="suscribir()">Suscribirse</button>
         </div>
+    </section>
 
-        <section class="newsletter">
-            <h2>Bodega Privada</h2>
-            <p>Suscríbete para recibir invitaciones a catas exclusivas y preventas de cosechas limitadas.</p>
-            <div class="form-group">
-                <input type="email" placeholder="Escribe tu correo electrónico">
-                <button>Unirme ahora</button>
-            </div>
-        </section>
-    </main>
+    <!-- CRÍTICAS -->
+    <section>
+        <h2>Críticas de expertos</h2>
+        <div id="criticas" class="cards"></div>
+    </section>
 
+</main>
+
+<script src="script.js"></script>
 </body>
-</html>
+</html> 
