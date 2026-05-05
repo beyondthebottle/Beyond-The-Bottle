@@ -52,7 +52,7 @@ body {
 
 .hero-content h1 {
     font-family: var(--fancy-font);
-    font-size: clamp(90px, 15vw, 175px); /* Un poco más grande al ser fuente delgada */
+    font-size: clamp(90px, 15vw, 155px); /* Un poco más grande al ser fuente delgada */
     font-weight: 400;
     margin: 0;
     
