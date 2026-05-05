@@ -1,23 +1,115 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond the Bottle</title>
-    <!-- FUENTES: Inter, Playfair y Monsieur La Doulaise -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+:root {
+    /* --- CAMBIA LA FUENTE AQUÍ --- */
+    /* Opciones: 'Italianno', 'Birthstone', 'Meie Script' */
+    --fancy-font: 'Italianno', cursive; 
+    
+    --wine-dark: #2A040C; 
+    --gold: #C8A24A;
+    --gold-light: #F0D9A7;
+    --bg-cream: #F5EDE2;
+    --serif-font: 'Playfair Display', serif;
+}
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Beyond the Bottle</h1>
-            <p>Explora el mundo detrás del dulzor del vino</p>
-        </div>
-    </section>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-cream);
+    font-family: 'Inter', sans-serif;
+}
 
-    <!-- Resto de tu contenido (container, cards, etc) -->
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(42, 4, 12, 0.7), rgba(42, 4, 12, 0.5)), 
+                url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-</body>
-</html>
+.hero-content h1 {
+    font-family: var(--fancy-font);
+    /* Al ser más simple, podemos usar un tamaño grande sin que agobie */
+    font-size: clamp(80px, 14vw, 160px); 
+    font-weight: 400;
+    margin: 0;
+    padding: 0.1em 0;
+    line-height: 1;
+    display: inline-block;
+
+    /* Dorado más sutil y sofisticado */
+    background: linear-gradient(to bottom, var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.4));
+}
+
+.hero-content p {
+    font-family: var(--serif-font);
+    text-transform: uppercase;
+    letter-spacing: 6px; /* Espaciado amplio = Lujo */
+    color: white;
+    font-size: clamp(12px, 1.5vw, 16px);
+    margin-top: 5px; 
+    opacity: 0.8;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* --- DETALLE DE LÍNEA --- */
+.hero-content::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 25px auto 0;
+}
+
+/* --- CARDS (Estilo Limpio) --- */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #E0DBD0;
+    padding: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+button {
+    background: var(--gold);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--wine-dark);
+}
