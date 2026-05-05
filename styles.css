@@ -1,41 +1,118 @@
 
 /* =========================
-   BASE
+   BASE GENERAL
 ========================= */
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #0b0709;
-    color: #f1e9e5;
+    background: #F3E9DD; /* beige elegante */
+    color: #2B2B2B;
     line-height: 1.6;
 }
 
+/* TITULOS ELEGANTES */
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    color: #6B1E2E; /* burdeo vino */
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* =========================
-   HERO TINTO (SIN IMAGENES GRANDES)
+   HERO GENERAL
 ========================= */
 
-.wine-hero-tinto {
-    height: 50vh;
-    background: linear-gradient(135deg, #2a0a12, #0b0709);
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(107,30,46,0.75),
+        rgba(243,233,221,0.95)
+    ),
+    url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3')
+    center/cover;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-bottom: 1px solid #2a1b22;
 }
 
-.hero-text h1 {
+.hero-content h1 {
     font-size: 60px;
-    letter-spacing: 1px;
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin: auto;
+    color: #444;
 }
 
 /* =========================
-   CONTAINER
+   CONTENEDOR
+========================= */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+/* =========================
+   CARDS VINOS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e2d6cc;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #6B1E2E;
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.newsletter input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #d8c7ba;
+    background: #fff;
+}
+
+.newsletter button {
+    padding: 12px 20px;
+    border: none;
+    background: #6B1E2E;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* =========================
+   VINOS - BASE
 ========================= */
 
 .wine-container {
@@ -45,21 +122,7 @@ h1, h2, h3 {
 }
 
 /* =========================
-   INTRO
-========================= */
-
-.wine-intro {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.lead {
-    font-size: 20px;
-    font-weight: 300;
-}
-
-/* =========================
-   SENSORIAL GRID
+   SENSORIAL
 ========================= */
 
 .sensorial-grid {
@@ -69,22 +132,21 @@ h1, h2, h3 {
 }
 
 .sensorial-card {
+    background: #fff;
+    border: 1px solid #e5d8cc;
     padding: 20px;
-    border: 1px solid #2a1b22;
-    background: rgba(255,255,255,0.02);
 }
 
+/* ICONOS SIMPLES */
 .icon {
+    color: #6E7F5A;
     font-size: 18px;
-    margin-bottom: 10px;
-    color: #c9a3b3;
 }
 
-/* barras */
+/* BARRAS */
 .bar {
     height: 4px;
-    background: #7a1f2b;
-    margin: 8px 0;
+    background: #6B1E2E;
     border-radius: 2px;
 }
 
@@ -104,13 +166,9 @@ h1, h2, h3 {
 }
 
 .aroma {
+    background: #fff;
+    border-left: 3px solid #6B1E2E;
     padding: 15px;
-    border-left: 2px solid #7a1f2b;
-}
-
-.mini-icon {
-    color: #c9a3b3;
-    margin-right: 5px;
 }
 
 /* =========================
@@ -125,28 +183,38 @@ h1, h2, h3 {
 .style {
     flex: 1;
     padding: 15px;
-    border: 1px solid #2a1b22;
+    background: #fff;
+    border: 1px solid #e5d8cc;
     text-align: center;
 }
 
 /* =========================
-   SECCIONES OSCURAS
+   IMÁGENES PEQUEÑAS
 ========================= */
 
-.dark {
-    background: #12070b;
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 30px;
+.mini-img {
+    width: 100%;
+    max-width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 10px;
 }
 
 /* =========================
-   BACK BUTTON
+   SECCIONES VERDE ACENTO
 ========================= */
 
+.dark-accent {
+    background: #6E7F5A;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* BACK */
 .back {
-    display: inline-block;
     margin: 20px;
-    font-size: 14px;
-    opacity: 0.7;
+    display: inline-block;
+    color: #6B1E2E;
 }
