@@ -10,6 +10,9 @@ function suscribir() {
     alert("Suscripción exitosa 🍷");
 }
 
+/* =========================
+   CRÍTICAS DE EXPERTOS
+========================= */
 let criticas = [
     {
         autor: "Robert Parker",
@@ -32,12 +35,15 @@ function mostrarCriticas() {
     criticas.forEach(c => {
         let div = document.createElement("div");
         div.className = "card";
+
         div.innerHTML = `
             <p><strong style="color:var(--wine);">${c.autor}</strong></p>
             <p style="font-style:italic;">"${c.texto}"</p>
         `;
+
         contenedor.appendChild(div);
     });
 }
 
+// Aseguramos que las críticas se carguen al iniciar
 window.onload = mostrarCriticas;
