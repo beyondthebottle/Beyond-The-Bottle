@@ -1,6 +1,6 @@
 
 /* =========================
-   BASE GLOBAL
+   BASE
 ========================= */
 
 body {
@@ -13,232 +13,29 @@ body {
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    margin: 0;
-}
-
-p {
-    opacity: 0.9;
-}
-
-/* LINKS */
-a {
-    color: inherit;
-    text-decoration: none;
 }
 
 /* =========================
-   HERO HOME
-========================= */
-
-.hero {
-    height: 90vh;
-    background: linear-gradient(
-        rgba(10,5,8,0.75),
-        rgba(10,5,8,0.95)
-    ),
-    url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3')
-    center/cover no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 64px;
-    letter-spacing: 1px;
-}
-
-.hero-content p {
-    max-width: 520px;
-    margin: auto;
-    opacity: 0.8;
-}
-
-.tag {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    opacity: 0.6;
-}
-
-/* =========================
-   CONTENEDOR GENERAL
-========================= */
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 20px;
-}
-
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-/* =========================
-   GRID DE VINOS
-========================= */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.card {
-    padding: 25px;
-    border: 1px solid #2a1b22;
-    background: rgba(255,255,255,0.02);
-    text-align: center;
-    transition: 0.3s ease;
-    font-size: 15px;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: #c9a3b3;
-    background: rgba(201,163,179,0.06);
-}
-
-/* =========================
-   NEWSLETTER
-========================= */
-
-.newsletter {
-    text-align: center;
-    margin-top: 80px;
-}
-
-.newsletter input {
-    width: 100%;
-    max-width: 420px;
-    padding: 12px;
-    margin: 6px 0;
-    background: #1a1216;
-    border: 1px solid #2a1b22;
-    color: #f1e9e5;
-}
-
-.newsletter button {
-    padding: 12px 22px;
-    margin-top: 10px;
-    border: 1px solid #c9a3b3;
-    background: transparent;
-    color: #f1e9e5;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.newsletter button:hover {
-    background: #c9a3b3;
-    color: #0b0709;
-}
-
-/* =========================
-   CRÍTICAS EXPERTOS
-========================= */
-
-#criticas {
-    display: grid;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* =========================
-   FIX GLOBAL IMÁGENES (CRÍTICO)
-========================= */
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* =========================
-   BLOQUEO DE IMÁGENES GRANDES
-========================= */
-
-.sensorial-card,
-.wine-image,
-img {
-    box-sizing: border-box;
-}
-
-/* =========================
-   SENSORIAL CARDS (CONTROL TOTAL)
-========================= */
-
-.sensorial-card {
-    overflow: hidden;
-    border-radius: 6px;
-}
-
-/* imagen SIEMPRE controlada */
-.sensorial-card img {
-    width: 100%;
-    height: 120px !important;   /* 🔴 fuerza tamaño fijo */
-    object-fit: cover;
-}
-
-/* =========================
-   IMAGEN PRINCIPAL VINO
-========================= */
-
-.wine-image {
-    margin-top: 40px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.wine-image img {
-    width: 100%;
-    height: 240px !important;   /* 🔴 evita imagen gigante */
-    object-fit: cover;
-}
-
-/* =========================
-   EVITA DESBORDES VISUALES
-========================= */
-
-.wine-container {
-    overflow-x: hidden;
-}
-#criticas .card {
-    text-align: left;
-}
-
-/* =========================
-   VINO TINTO HERO
+   HERO TINTO (SIN IMAGENES GRANDES)
 ========================= */
 
 .wine-hero-tinto {
-    height: 55vh;
-    background: linear-gradient(
-        rgba(40,0,10,0.75),
-        rgba(10,5,8,0.95)
-    ),
-    url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb')
-    center/cover no-repeat;
-
+    height: 50vh;
+    background: linear-gradient(135deg, #2a0a12, #0b0709);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-bottom: 1px solid #2a1b22;
 }
 
 .hero-text h1 {
-    font-size: 64px;
+    font-size: 60px;
+    letter-spacing: 1px;
 }
 
 /* =========================
-   CONTENIDO VINO
+   CONTAINER
 ========================= */
 
 .wine-container {
@@ -247,10 +44,13 @@ img {
     padding: 60px 20px;
 }
 
+/* =========================
+   INTRO
+========================= */
+
 .wine-intro {
     font-size: 18px;
     line-height: 1.8;
-    margin-bottom: 40px;
 }
 
 .lead {
@@ -259,38 +59,32 @@ img {
 }
 
 /* =========================
-   SECCIONES
+   SENSORIAL GRID
 ========================= */
 
-.wine-section {
-    margin-bottom: 50px;
+.sensorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.dark {
-    background: #12070b;
-    padding: 30px;
-    border-radius: 10px;
+.sensorial-card {
+    padding: 20px;
+    border: 1px solid #2a1b22;
+    background: rgba(255,255,255,0.02);
 }
 
-/* =========================
-   SENSORIAL (orden limpio)
-========================= */
-
-.sensorial-row {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.sensor-item h3 {
-    margin-bottom: 5px;
+.icon {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #c9a3b3;
 }
 
 /* barras */
 .bar {
     height: 4px;
     background: #7a1f2b;
-    margin: 6px 0;
+    margin: 8px 0;
     border-radius: 2px;
 }
 
@@ -309,8 +103,14 @@ img {
     gap: 20px;
 }
 
-.aromas h3 {
-    margin-bottom: 5px;
+.aroma {
+    padding: 15px;
+    border-left: 2px solid #7a1f2b;
+}
+
+.mini-icon {
+    color: #c9a3b3;
+    margin-right: 5px;
 }
 
 /* =========================
@@ -330,29 +130,23 @@ img {
 }
 
 /* =========================
-   IMÁGENES CONTROLADAS (CLAVE)
+   SECCIONES OSCURAS
 ========================= */
 
-.sensorial-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    filter: contrast(1.05) saturate(0.95);
-}
-
-.wine-image img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 8px;
+.dark {
+    background: #12070b;
+    padding: 30px;
+    border-radius: 10px;
     margin-top: 30px;
 }
 
-/* hover elegante */
-.sensorial-card:hover {
-    transform: translateY(-4px);
-    border-color: #7a1f2b;
-    transition: 0.3s ease;
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+    display: inline-block;
+    margin: 20px;
+    font-size: 14px;
+    opacity: 0.7;
 }
