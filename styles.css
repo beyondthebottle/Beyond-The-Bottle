@@ -1,10 +1,9 @@
-
 :root {
-    --bg: #F5EDE2;
+    --bg: #F5EDE2;        /* beige base */
+    --greige: #CFC6BB;    /* NUEVO: greige elegante */
     --wine: #6B1E2E;
     --wine-dark: #4A0F1B;
     --gold: #C8A24A;
-    --gold-soft: #D8B96A;
     --text: #2B2B2B;
     --text-soft: #5A4A4A;
 }
