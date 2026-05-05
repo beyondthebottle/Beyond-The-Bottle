@@ -1,40 +1,28 @@
 
 /* =========================
-   BASE GENERAL
+   BASE
 ========================= */
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #F3E9DD; /* beige elegante */
+    background: #F3E9DD;
     color: #2B2B2B;
-    line-height: 1.6;
-}
-
-/* TITULOS ELEGANTES */
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #6B1E2E; /* burdeo vino */
-}
-
-/* LINKS */
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 /* =========================
-   HERO GENERAL
+   HERO PREMIUM
 ========================= */
 
 .hero {
     height: 90vh;
     background: linear-gradient(
-        rgba(107,30,46,0.75),
-        rgba(243,233,221,0.95)
-    ),
-    url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3')
-    center/cover;
+        180deg,
+        #6B1E2E 0%,
+        #8A2A3A 30%,
+        #C9A27E 70%,
+        #F3E9DD 100%
+    );
 
     display: flex;
     align-items: center;
@@ -43,17 +31,26 @@ a {
 }
 
 .hero-content h1 {
-    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    color: #C8A24A;
 }
 
 .hero-content p {
-    max-width: 500px;
-    margin: auto;
-    color: #444;
+    color: #3a2b2b;
 }
 
 /* =========================
-   CONTENEDOR
+   TITULOS
+========================= */
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #C8A24A;
+}
+
+/* =========================
+   CONTAINER
 ========================= */
 
 .container {
@@ -73,9 +70,9 @@ a {
 }
 
 .card {
-    background: #ffffff;
-    border: 1px solid #e2d6cc;
+    background: #fff;
     padding: 25px;
+    border: 1px solid #e6d7c9;
     text-align: center;
     transition: 0.3s;
 }
@@ -100,121 +97,17 @@ a {
     padding: 12px;
     margin: 5px 0;
     border: 1px solid #d8c7ba;
-    background: #fff;
 }
 
 .newsletter button {
     padding: 12px 20px;
-    border: none;
     background: #6B1E2E;
     color: #fff;
+    border: none;
     cursor: pointer;
 }
 
-/* =========================
-   VINOS - BASE
-========================= */
-
-.wine-container {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-/* =========================
-   SENSORIAL
-========================= */
-
-.sensorial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.sensorial-card {
-    background: #fff;
-    border: 1px solid #e5d8cc;
-    padding: 20px;
-}
-
-/* ICONOS SIMPLES */
-.icon {
-    color: #6E7F5A;
-    font-size: 18px;
-}
-
-/* BARRAS */
-.bar {
-    height: 4px;
-    background: #6B1E2E;
-    border-radius: 2px;
-}
-
-.bar.light { width: 30%; }
-.bar.medium { width: 50%; }
-.bar.high { width: 70%; }
-.bar.strong { width: 90%; }
-
-/* =========================
-   AROMAS
-========================= */
-
-.aromas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.aroma {
-    background: #fff;
-    border-left: 3px solid #6B1E2E;
-    padding: 15px;
-}
-
-/* =========================
-   ESTILOS
-========================= */
-
-.styles {
-    display: flex;
-    gap: 10px;
-}
-
-.style {
-    flex: 1;
-    padding: 15px;
-    background: #fff;
-    border: 1px solid #e5d8cc;
-    text-align: center;
-}
-
-/* =========================
-   IMÁGENES PEQUEÑAS
-========================= */
-
-.mini-img {
-    width: 100%;
-    max-width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-top: 10px;
-}
-
-/* =========================
-   SECCIONES VERDE ACENTO
-========================= */
-
-.dark-accent {
-    background: #6E7F5A;
-    color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-/* BACK */
-.back {
-    margin: 20px;
-    display: inline-block;
-    color: #6B1E2E;
+.newsletter button:hover {
+    background: #C8A24A;
+    color: #2B2B2B;
 }
