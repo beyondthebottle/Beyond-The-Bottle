@@ -5,46 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond the Bottle</title>
 
-    <!-- Fuentes -->
+    <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Cormorant:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- HERO -->
 <header class="hero">
     <div class="hero-content">
         <h1>Beyond the Bottle</h1>
-        <p>Explora el mundo detrás del dulzor del vino</p>
+        <p>Explora el mundo detrás del vino</p>
     </div>
 </header>
 
 <main class="container">
 
-    <section class="intro">
+    <!-- INTRO -->
+    <section class="info-section">
         <h2>Descubre el mundo del vino</h2>
         <p>
-            Una plataforma educativa que explora estilos, aromas y estructuras del vino desde una perspectiva sensorial y moderna.
+            Beyond the Bottle es una experiencia sensorial digital que invita a explorar los distintos estilos de vino,
+            sus aromas, estructuras y posibilidades gastronómicas.
+        </p>
+        <p>
+            Desde vinos ligeros y frescos hasta expresiones intensas y complejas, cada categoría abre una puerta
+            a un universo distinto de sensaciones.
         </p>
     </section>
 
     <!-- TIPOS DE VINO -->
     <section>
-        <h2>Tipos de vino</h2>
+        <h2>Explora por tipo de vino</h2>
+
         <div class="cards">
-            <a class="card" href="tinto.html">Vino Tinto</a>
-            <a class="card" href="blanco.html">Vino Blanco</a>
-            <a class="card" href="rosado.html">Vino Rosado</a>
-            <a class="card" href="espumoso.html">Vino Espumoso</a>
-            <a class="card" href="postre.html">Vino de Postre</a>
-            <a class="card" href="fortificado.html">Vino Fortificado</a>
-            <a class="card" href="naranja.html">Vino Naranja</a>
+
+            <a class="card" href="tinto.html">🍷 Vino Tinto</a>
+            <a class="card" href="blanco.html">🥂 Vino Blanco</a>
+            <a class="card" href="rosado.html">🌸 Vino Rosado</a>
+            <a class="card" href="espumoso.html">✨ Espumoso</a>
+            <a class="card" href="postre.html">🍯 Vino de Postre</a>
+            <a class="card" href="fortificado.html">🔥 Fortificado</a>
+            <a class="card" href="naranja.html">🍊 Vino Naranja</a>
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="info-section split">
+        <div class="text">
+            <h2>Una experiencia sensorial</h2>
+            <p>
+                El vino no solo se bebe, se observa, se huele y se interpreta.
+                Cada copa es una historia que refleja su origen, su clima y su proceso de elaboración.
+            </p>
+            <p>
+                Aprender a degustar permite descubrir matices ocultos y transformar
+                una experiencia cotidiana en un momento memorable.
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Copa de vino">
         </div>
     </section>
 
     <!-- NEWSLETTER -->
     <section class="newsletter">
         <h2>Suscripción</h2>
+
         <div class="newsletter-form">
             <input type="text" id="nombre" placeholder="Nombre completo">
             <input type="email" id="correo" placeholder="Correo electrónico">
@@ -61,5 +91,6 @@
 </main>
 
 <script src="script.js"></script>
+
 </body>
 </html>
