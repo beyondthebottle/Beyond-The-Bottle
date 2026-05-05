@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Beyond the Bottle</title>
 
     <!-- FUENTES -->
@@ -15,80 +14,88 @@
 
 <body>
 
-    <!-- HERO CINEMÁTICO -->
+    <!-- HERO -->
     <header class="hero">
         <div class="hero-overlay">
-
             <div class="hero-content">
-                <span class="tagline">Wine Experience Platform</span>
-
                 <h1>Beyond the Bottle</h1>
-
-                <p>Explora el vino desde la cultura, el sabor y la inteligencia sensorial</p>
-
-                <a href="#contenido" class="btn-hero">Explorar experiencia</a>
+                <p>Exploración educativa del vino</p>
+                <a href="#contenido" class="btn-hero">Explorar</a>
             </div>
-
         </div>
     </header>
 
-    <!-- CONTENIDO -->
     <main id="contenido" class="container">
 
-        <!-- INTRO SECCIÓN (nuevo nivel editorial) -->
+        <!-- INTRO -->
         <section class="intro">
-            <h2>Una nueva forma de entender el vino</h2>
-            <p>
-                Aprende, descubre y recibe recomendaciones personalizadas según tu gusto.
-            </p>
+            <h2>Una guía sobre el vino</h2>
+            <p>Aprende sobre estilos, maridajes y cultura enológica.</p>
         </section>
 
-        <!-- BLOQUES EN FORMATO VERTICAL (NO GRID DURO) -->
-        <section class="stack">
+        <!-- LECCIONES -->
+        <section class="block">
+            <h2>Tipos de vino</h2>
 
-            <!-- APRENDER -->
-            <div class="panel">
-                <h2>📚 Aprende</h2>
-
-                <div class="card soft">
-                    <h3>Tipos de vino</h3>
-                    <p>Tinto · Blanco · Rosado</p>
-                </div>
-
-                <div class="card soft">
-                    <h3>Cultura del vino</h3>
-                    <p>Historia, territorio y expresión en cada copa.</p>
-                </div>
+            <div class="cards">
+                <div class="card">Tinto</div>
+                <div class="card">Blanco</div>
+                <div class="card">Rosado</div>
+                <div class="card">Espumoso</div>
+                <div class="card">De postre</div>
+                <div class="card">Fortificado</div>
+                <div class="card">Naranja</div>
             </div>
+        </section>
 
-            <!-- IA -->
-            <div class="panel highlight-panel">
-                <h2>🤖 Recomendador inteligente</h2>
+        <!-- IA MARIDAJE -->
+        <section class="block">
+            <h2>Recomendación por tipo de comida</h2>
 
-                <div class="card glass">
-                    <input type="text" id="preferencia" placeholder="Ej: algo dulce o para carne">
+            <table class="tabla">
+                <tr>
+                    <th>Comida</th>
+                    <th>Recomendación</th>
+                </tr>
+                <tr>
+                    <td>Carnes</td>
+                    <td>Tinto de cuerpo medio o alto</td>
+                </tr>
+                <tr>
+                    <td>Pescados</td>
+                    <td>Blanco fresco y ácido</td>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>Tinto suave o blanco estructurado</td>
+                </tr>
+                <tr>
+                    <td>Postres</td>
+                    <td>Vino dulce o fortificado</td>
+                </tr>
+                <tr>
+                    <td>Picante</td>
+                    <td>Espumoso o blanco aromático</td>
+                </tr>
+            </table>
+        </section>
 
-                    <button onclick="recomendarVino()">Generar recomendación</button>
+        <!-- CRÍTICOS -->
+        <section class="block">
+            <h2>Críticas de expertos</h2>
+            <div id="criticas"></div>
+        </section>
 
-                    <p id="resultadoIA"></p>
-                </div>
-            </div>
+        <!-- NEWSLETTER -->
+        <section class="block">
+            <h2>Newsletter</h2>
 
-            <!-- COMUNIDAD -->
-            <div class="panel">
-                <h2>⭐ Comunidad</h2>
+            <input type="email" id="email" placeholder="Correo electrónico">
+            <button onclick="suscribirseNewsletter()">Suscribirse</button>
 
-                <div class="card glass">
-                    <input type="text" id="nombre" placeholder="Tu nombre">
-
-                    <textarea id="comentario" placeholder="Comparte tu experiencia..."></textarea>
-
-                    <button onclick="agregarResena()">Publicar reseña</button>
-                </div>
-
-                <div id="contenedorResenas" class="reviews"></div>
-            </div>
-
+            <button class="reset-btn" onclick="reiniciarSistema()">
+                Reiniciar sistema
+            </button>
         </section>
 
     </main>
@@ -96,6 +103,4 @@
     <script src="script.js"></script>
 
 </body>
-</html><button class="reset-btn" onclick="reiniciarSistema()">
-    Reiniciar sistema
-</button>
+</html>
