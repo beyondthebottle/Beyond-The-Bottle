@@ -2,7 +2,7 @@
     --bg: #F5EDE2;
     --greige: #CFC6BB;
     --wine: #6B1E2E;
-    --wine-dark: #2A040C; /* Burdeo más profundo */
+    --wine-dark: #2A040C; 
     --gold: #C8A24A;
     --gold-light: #E5C786;
     --text: #2B2B2B;
@@ -10,24 +10,19 @@
     --fancy-font: 'Pinyon Script', cursive;
 }
 
-/* =========================
-   BASE & PATRÓN
-========================= */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: var(--text);
     background-color: var(--bg);
-    /* Patrón de ilustración suave */
+    /* Patrón de ilustración suave de fondo */
     background-image: 
         linear-gradient(rgba(245, 237, 226, 0.94), rgba(245, 237, 226, 0.94)),
         url('https://www.transparenttextures.com/patterns/pinstripe.png'); 
     background-attachment: fixed;
 }
 
-/* =========================
-   HERO (EL CAMBIO PRINCIPAL)
-========================= */
+/* HERO CON DEGRADADO BURDEO */
 .hero {
     height: 100vh;
     display: flex;
@@ -47,33 +42,28 @@ body {
 
 .hero-content h1 {
     font-family: var(--fancy-font);
-    font-size: clamp(80px, 15vw, 160px); /* Tamaño masivo y fluido */
+    font-size: clamp(80px, 15vw, 150px);
     margin: 0;
     line-height: 0.8;
-    /* Efecto Dorado Metalizado */
+    /* Dorado Metalizado */
     background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 50%, #8A6E2F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0px 4px 15px rgba(0,0,0,0.5));
-    padding: 20px;
 }
 
 .hero-content p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: white;
-    font-size: clamp(18px, 4vw, 26px);
-    letter-spacing: 2px;
-    margin-top: -10px;
-    opacity: 0.9;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    font-size: clamp(18px, 3vw, 24px);
+    letter-spacing: 1px;
+    margin-top: 10px;
 }
 
-/* =========================
-   CONTENEDOR Y CARDS
-========================= */
+/* CONTENEDOR */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     padding: 80px 20px;
 }
@@ -83,69 +73,67 @@ h2 {
     color: var(--wine);
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 40px;
 }
 
+/* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 18px;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: 1px solid var(--greige);
-    padding: 30px;
+    padding: 25px;
+    border-radius: 4px;
+    transition: 0.4s;
     text-decoration: none;
     color: var(--text);
     text-align: center;
-    transition: 0.4s;
     font-weight: 500;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    background: white;
+    transform: translateY(-8px);
     border-color: var(--gold);
+    background: white;
 }
 
-/* =========================
-   NEWSLETTER PREMIUM
-========================= */
+/* NEWSLETTER */
 .newsletter {
     background: var(--wine-dark);
-    padding: 80px 20px;
+    padding: 60px 40px;
     color: white;
     text-align: center;
-    margin: 60px 0;
+    margin-top: 80px;
+    border-radius: 8px;
 }
 
-.newsletter h2 { color: var(--gold); }
+.newsletter h2 { color: var(--gold); margin-bottom: 20px; }
 
 .newsletter input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--gold);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--gold);
     color: white;
-    padding: 10px;
+    padding: 12px;
     margin: 10px;
     width: 250px;
-    outline: none;
 }
 
+/* BOTÓN */
 button {
     background: var(--gold);
     color: var(--wine-dark);
     border: none;
     padding: 12px 30px;
     font-weight: 700;
-    text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
+    text-transform: uppercase;
 }
 
 button:hover {
     background: white;
-    letter-spacing: 1px;
 }
