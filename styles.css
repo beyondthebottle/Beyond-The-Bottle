@@ -1,6 +1,7 @@
+
 :root {
     --bg: #F5EDE2;        /* beige base */
-    --greige: #CFC6BB;    /* NUEVO: greige elegante */
+    --greige: #CFC6BB;    /* nuevo tono elegante */
     --wine: #6B1E2E;
     --wine-dark: #4A0F1B;
     --gold: #C8A24A;
@@ -18,17 +19,17 @@ body {
     color: var(--text);
     background-color: var(--bg);
 
-    /* ESTAMPADO ELEGANTE */
+    /* ESTAMPADO SUAVE EDITORIAL */
     background-image:
-        radial-gradient(rgba(107, 30, 46, 0.06) 1px, transparent 1px),
-        radial-gradient(rgba(200, 162, 74, 0.04) 1px, transparent 1px);
+        radial-gradient(rgba(107, 30, 46, 0.05) 1px, transparent 1px),
+        radial-gradient(rgba(207, 198, 187, 0.08) 1px, transparent 1px);
 
     background-size: 28px 28px;
     background-position: 0 0, 14px 14px;
 }
 
 /* =========================
-   TITULOS (LUJO EDITORIAL)
+   TITULOS LUJO
 ========================= */
 
 h1, h2, h3 {
@@ -38,7 +39,7 @@ h1, h2, h3 {
 }
 
 /* =========================
-   HERO PREMIUM CON IMAGEN
+   HERO CON IMAGEN
 ========================= */
 
 .hero {
@@ -51,9 +52,9 @@ h1, h2, h3 {
     background-image:
         linear-gradient(
             180deg,
-            rgba(107, 30, 46, 0.75) 0%,
-            rgba(207, 198, 187, 0.65) 60%,
-            #F5EDE2 100%
+            rgba(107, 30, 46, 0.78) 0%,
+            rgba(207, 198, 187, 0.65) 55%,
+            var(--bg) 100%
         ),
         url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb");
 
@@ -85,7 +86,7 @@ h1, h2, h3 {
 }
 
 /* =========================
-   CARDS
+   CARDS BASE
 ========================= */
 
 .cards {
@@ -96,15 +97,28 @@ h1, h2, h3 {
 
 .card {
     background: white;
-    padding: 22px;
     border: 1px solid #e6d7c9;
+    padding: 18px;
+    border-radius: 6px;
     transition: 0.25s ease;
-    border-radius: 4px;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--wine);
+}
+
+/* =========================
+   IMAGENES EN CARDS (CLAVE)
+========================= */
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 /* =========================
@@ -146,8 +160,7 @@ a.card {
     text-decoration: none;
     color: var(--text);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     font-weight: 500;
 }
 
