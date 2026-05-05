@@ -1,65 +1,28 @@
-/* =========================
-   VARIABLES Y FUENTES
-========================= */
 :root {
-    --bg: #F5EDE2;         /* beige base */
-    --greige: #CFC6BB;     /* tono elegante */
+    --bg: #F5EDE2;
+    --greige: #CFC6BB;
     --wine: #6B1E2E;
-    --wine-dark: #4A0F1B;
+    --wine-dark: #2A040C; 
     --gold: #C8A24A;
+    --gold-light: #E5C786;
     --text: #2B2B2B;
     --text-soft: #5A4A4A;
-    --fancy-font: 'Pinyon Script', cursive; /* Caligrafía */
+    --fancy-font: 'Pinyon Script', cursive;
 }
 
-/* =========================
-   BASE & PATRÓN DE FONDO
-========================= */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: var(--text);
     background-color: var(--bg);
-
-    /* PATRÓN ILUSTRADO: 
-       He configurado una capa de color sobre el patrón para que no 
-       le quite legibilidad al texto. Puedes cambiar la URL por tu imagen. */
+    /* Patrón de ilustración suave de fondo */
     background-image: 
-        linear-gradient(rgba(245, 237, 226, 0.92), rgba(245, 237, 226, 0.92)),
-        url('https://www.transparenttextures.com/patterns/pinstripe.png'); /* Sustituir por tu ilustración */
+        linear-gradient(rgba(245, 237, 226, 0.94), rgba(245, 237, 226, 0.94)),
+        url('https://www.transparenttextures.com/patterns/pinstripe.png'); 
     background-attachment: fixed;
-    line-height: 1.6;
 }
 
-/* =========================
-   TÍTULOS EDITORIALES
-========================= */
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-}
-
-h2 {
-    color: var(--wine);
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-/* Línea decorativa bajo los títulos */
-h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--gold);
-    margin: 10px auto;
-}
-
-/* =========================
-   HERO (IMAGEN TRAS EL TÍTULO)
-========================= */
+/* HERO CON DEGRADADO BURDEO */
 .hero {
     height: 100vh;
     display: flex;
@@ -67,177 +30,110 @@ h2::after {
     justify-content: center;
     text-align: center;
     position: relative;
-    
-    /* CAMBIO AQUÍ: Degradado Burdeo más intenso */
     background: linear-gradient(
-                    rgba(42, 4, 12, 0.7), /* Burdeo muy oscuro arriba */
-                    rgba(107, 30, 46, 0.5) /* Tono vino en el centro */
+                    rgba(42, 4, 12, 0.75), 
+                    rgba(107, 30, 46, 0.55)
                 ), 
                 url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80');
-    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
-}
 
 .hero-content h1 {
     font-family: var(--fancy-font);
-    font-size: 120px; /* Tamaño grande para lucir la caligrafía */
-    color: var(--gold);
-    text-transform: none;
+    font-size: clamp(80px, 15vw, 150px);
     margin: 0;
-    line-height: 0.9;
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    line-height: 0.8;
+    /* Dorado Metalizado */
+    background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 50%, #8A6E2F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 15px rgba(0,0,0,0.5));
 }
 
 .hero-content p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: white;
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 24px);
     letter-spacing: 1px;
     margin-top: 10px;
 }
 
-/* =========================
-   CONTENEDOR Y SECCIONES
-========================= */
+/* CONTENEDOR */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
-.intro {
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--wine);
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 80px auto;
-    font-size: 1.2rem;
-    color: var(--text-soft);
+    font-size: 2.2rem;
 }
 
-/* =========================
-   GRID DE CARDS (TIPOS Y CRÍTICAS)
-========================= */
+/* CARDS */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.7); /* Transparencia para ver el patrón */
-    backdrop-filter: blur(8px);           /* Efecto de cristal */
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
     border: 1px solid var(--greige);
-    padding: 35px 25px;
-    border-radius: 0;                     /* Bordes rectos más elegantes */
-    transition: all 0.4s ease;
+    padding: 25px;
+    border-radius: 4px;
+    transition: 0.4s;
+    text-decoration: none;
+    color: var(--text);
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    font-weight: 500;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     border-color: var(--gold);
     background: white;
-    box-shadow: 0 15px 40px rgba(107, 30, 46, 0.1);
 }
 
-/* Links específicos de Tipos de Vino */
-a.card {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 0.9rem;
-}
-
-a.card:hover {
-    color: var(--wine);
-}
-
-/* =========================
-   NEWSLETTER
-========================= */
+/* NEWSLETTER */
 .newsletter {
     background: var(--wine-dark);
-    padding: 80px 40px;
+    padding: 60px 40px;
     color: white;
     text-align: center;
-    margin: 80px -20px; /* Rompe el contenedor para ocupar más ancho */
+    margin-top: 80px;
+    border-radius: 8px;
 }
 
-.newsletter h2 {
-    color: var(--gold);
-}
-
-.newsletter h2::after {
-    background: var(--gold);
-}
+.newsletter h2 { color: var(--gold); margin-bottom: 20px; }
 
 .newsletter input {
-    max-width: 300px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--gold);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--gold);
     color: white;
     padding: 12px;
     margin: 10px;
-    outline: none;
+    width: 250px;
 }
 
-.newsletter input::placeholder {
-    color: rgba(255,255,255,0.6);
-}
-
-/* =========================
-   BOTONES
-========================= */
+/* BOTÓN */
 button {
     background: var(--gold);
     color: var(--wine-dark);
-    border: 1px solid var(--gold);
-    padding: 15px 35px;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 700;
     cursor: pointer;
     transition: 0.3s;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 button:hover {
-    background: transparent;
-    color: var(--gold);
-}
-
-/* =========================
-   CRÍTICAS DE EXPERTOS
-========================= */
-#criticas .card p strong {
-    display: block;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: var(--wine);
-}
-
-#criticas .card p {
-    font-style: italic;
-    color: var(--text-soft);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 70px;
-    }
-    
-    .cards {
-        grid-template-columns: 1fr;
-    }
+    background: white;
 }
