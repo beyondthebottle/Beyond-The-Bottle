@@ -1,4 +1,3 @@
-
 function suscribir() {
     let nombre = document.getElementById("nombre").value;
     let correo = document.getElementById("correo").value;
@@ -14,7 +13,6 @@ function suscribir() {
 /* =========================
    CRÍTICAS DE EXPERTOS
 ========================= */
-
 let criticas = [
     {
         autor: "Robert Parker",
@@ -32,18 +30,20 @@ let criticas = [
 
 function mostrarCriticas() {
     let contenedor = document.getElementById("criticas");
+    if(!contenedor) return;
 
     criticas.forEach(c => {
         let div = document.createElement("div");
         div.className = "card";
 
         div.innerHTML = `
-            <p><strong>${c.autor}</strong></p>
-            <p>${c.texto}</p>
+            <p><strong style="color:var(--wine);">${c.autor}</strong></p>
+            <p style="font-style:italic;">"${c.texto}"</p>
         `;
 
         contenedor.appendChild(div);
     });
 }
 
-mostrarCriticas();
+// Aseguramos que las críticas se carguen al iniciar
+window.onload = mostrarCriticas;
