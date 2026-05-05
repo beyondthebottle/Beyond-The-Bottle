@@ -6,86 +6,71 @@
 
 <title>Beyond the Bottle</title>
 
-<!-- TIPOGRAFÍA -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- CSS -->
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- =========================
-     HERO
-========================= -->
 <header class="hero">
     <div class="hero-content">
-        <span class="tag">Wine Experience Platform</span>
         <h1>Beyond the Bottle</h1>
-        <p>Exploración contemporánea del vino como expresión cultural, sensorial y territorial</p>
+        <p>Explora el vino como experiencia sensorial, no como bebida</p>
     </div>
 </header>
 
-<!-- =========================
-     CONTENIDO PRINCIPAL
-========================= -->
 <main class="container">
 
-    <!-- INTRO -->
-    <section class="intro">
-        <h2>Una colección curada de vinos</h2>
-        <p>
-            Cada vino representa una interpretación única del territorio, la uva y el tiempo.
-            Esta plataforma organiza esa diversidad en una experiencia editorial.
-        </p>
-    </section>
+<section class="intro">
+    <h2>Descubre el mundo del vino</h2>
+    <p>
+        Una plataforma educativa que explora estilos, aromas y estructuras del vino desde una perspectiva sensorial y moderna.
+    </p>
+</section>
 
-    <!-- =========================
-         TIPOS DE VINO
-    ========================== -->
-    <section class="block">
-        <h2>Explorar colección</h2>
+<!-- TIPOS DE VINO -->
+<section>
 
-        <div class="cards">
+<h2>Tipos de vino</h2>
 
-            <a class="card" href="tinto.html">Vino Tinto</a>
-            <a class="card" href="blanco.html">Vino Blanco</a>
-            <a class="card" href="rosado.html">Vino Rosado</a>
-            <a class="card" href="espumoso.html">Vino Espumoso</a>
-            <a class="card" href="postre.html">Vino de Postre</a>
-            <a class="card" href="fortificado.html">Vino Fortificado</a>
-            <a class="card" href="naranja.html">Vino Naranja</a>
+<div class="cards">
 
-        </div>
-    </section>
+<a class="card" href="tinto.html">Vino Tinto</a>
+<a class="card" href="blanco.html">Vino Blanco</a>
+<a class="card" href="rosado.html">Vino Rosado</a>
+<a class="card" href="espumoso.html">Vino Espumoso</a>
+<a class="card" href="postre.html">Vino de Postre</a>
+<a class="card" href="fortificado.html">Vino Fortificado</a>
+<a class="card" href="naranja.html">Vino Naranja</a>
 
-    <!-- =========================
-         CRÍTICAS DE EXPERTOS
-    ========================== -->
-    <section class="block">
-        <h2>Perspectiva de expertos</h2>
+</div>
 
-        <div id="criticas"></div>
-    </section>
+</section>
 
-    <!-- =========================
-         NEWSLETTER
-    ========================== -->
-    <section class="newsletter">
+<!-- NEWSLETTER -->
+<section class="newsletter">
 
-        <h2>Acceso editorial exclusivo</h2>
-        <p>Recibe análisis curatoriales del mundo del vino directamente en tu correo.</p>
+<h2>Suscripción</h2>
 
-        <input type="text" id="nombreCompleto" placeholder="Nombre completo">
-        <input type="email" id="email" placeholder="Correo electrónico">
+<input type="text" id="nombre" placeholder="Nombre completo">
+<input type="email" id="correo" placeholder="Correo electrónico">
 
-        <button onclick="suscribirseNewsletter()">Suscribirse</button>
+<button onclick="suscribir()">Suscribirse</button>
 
-    </section>
+</section>
+
+<!-- CRÍTICAS -->
+<section>
+
+<h2>Críticas de expertos</h2>
+
+<div id="criticas" class="cards"></div>
+
+</section>
 
 </main>
 
-<!-- SCRIPT -->
 <script src="script.js"></script>
 
 </body>
