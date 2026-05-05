@@ -5,102 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond the Bottle</title>
 
-    <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h1>Beyond the Bottle</h1>
-                <p>Exploración educativa del vino</p>
-                <a href="#contenido" class="btn-hero">Explorar</a>
-            </div>
+<header class="hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Beyond the Bottle</h1>
+            <p>Exploración del vino como experiencia sensorial</p>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main id="contenido" class="container">
+<main class="container">
 
-        <!-- INTRO -->
-        <section class="intro">
-            <h2>Una guía sobre el vino</h2>
-            <p>Aprende sobre estilos, maridajes y cultura enológica.</p>
-        </section>
+    <section class="intro">
+        <h2>Descubre el universo del vino</h2>
+        <p>Selecciona un estilo y explora su identidad, carácter y expresión sensorial.</p>
+    </section>
 
-        <!-- LECCIONES -->
-        <section class="block">
-            <h2>Tipos de vino</h2>
+    <section class="block">
+        <h2>Tipos de vino</h2>
 
-            <div class="cards">
-                <div class="card">Tinto</div>
-                <div class="card">Blanco</div>
-                <div class="card">Rosado</div>
-                <div class="card">Espumoso</div>
-                <div class="card">De postre</div>
-                <div class="card">Fortificado</div>
-                <div class="card">Naranja</div>
-            </div>
-        </section>
+        <div class="cards">
 
-        <!-- IA MARIDAJE -->
-        <section class="block">
-            <h2>Recomendación por tipo de comida</h2>
+            <a class="card" href="tinto.html">Vino Tinto</a>
+            <a class="card" href="blanco.html">Vino Blanco</a>
+            <a class="card" href="rosado.html">Vino Rosado</a>
+            <a class="card" href="espumoso.html">Vino Espumoso</a>
+            <a class="card" href="postre.html">Vino de Postre</a>
+            <a class="card" href="fortificado.html">Vino Fortificado</a>
+            <a class="card" href="naranja.html">Vino Naranja</a>
 
-            <table class="tabla">
-                <tr>
-                    <th>Comida</th>
-                    <th>Recomendación</th>
-                </tr>
-                <tr>
-                    <td>Carnes</td>
-                    <td>Tinto de cuerpo medio o alto</td>
-                </tr>
-                <tr>
-                    <td>Pescados</td>
-                    <td>Blanco fresco y ácido</td>
-                </tr>
-                <tr>
-                    <td>Pasta</td>
-                    <td>Tinto suave o blanco estructurado</td>
-                </tr>
-                <tr>
-                    <td>Postres</td>
-                    <td>Vino dulce o fortificado</td>
-                </tr>
-                <tr>
-                    <td>Picante</td>
-                    <td>Espumoso o blanco aromático</td>
-                </tr>
-            </table>
-        </section>
+        </div>
+    </section>
 
-        <!-- CRÍTICOS -->
-        <section class="block">
-            <h2>Críticas de expertos</h2>
-            <div id="criticas"></div>
-        </section>
-
-        <!-- NEWSLETTER -->
-        <section class="block">
-            <h2>Newsletter</h2>
-
-            <input type="email" id="email" placeholder="Correo electrónico">
-            <button onclick="suscribirseNewsletter()">Suscribirse</button>
-
-            <button class="reset-btn" onclick="reiniciarSistema()">
-                Reiniciar sistema
-            </button>
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
+</main>
 
 </body>
 </html>
