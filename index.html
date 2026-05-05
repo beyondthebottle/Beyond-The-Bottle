@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond the Bottle</title>
-    <!-- FUENTES: Inter, Playfair y Monsieur La Doulaise -->
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,400;1,400&family=Birthstone&family=Meie+Script&family=Italianno&display=swap" rel="stylesheet">
+    <title>Beyond the Bottle | Cultura y Pasión por el Vino</title>
+    
+    <!-- 1. Importación de Google Fonts: Birthstone (Título), Playfair Display (Subtítulos) e Inter (Cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- 2. Vinculación del archivo CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon (Opcional) -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/763/763007.png">
 </head>
 <body>
 
+    <!-- SECCIÓN HERO: Título principal con caligrafía Birthstone -->
     <section class="hero">
         <div class="hero-content">
             <h1>Beyond the Bottle</h1>
@@ -17,7 +26,55 @@
         </div>
     </section>
 
-    <!-- Resto de tu contenido (container, cards, etc) -->
+    <!-- CONTENEDOR PRINCIPAL: Secciones de contenido -->
+    <main class="container">
+        
+        <!-- SECCIÓN DE BIENVENIDA -->
+        <section class="intro">
+            <h2>Nuestra Selección</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+                Sumérgete en una experiencia sensorial única, donde cada botella cuenta una historia de tierra, clima y tradición.
+            </p>
+        </section>
+
+        <!-- GRILLA DE TARJETAS (CARDS) -->
+        <div class="cards">
+            <article class="card">
+                <h3>Vinos Tintos</h3>
+                <p>Cuerpo, carácter y notas profundas de frutos rojos y madera.</p>
+                <a href="#" style="color: var(--gold); text-decoration: none; font-weight: bold; margin-top: 15px; display: inline-block;">Ver Colección →</a>
+            </article>
+
+            <article class="card">
+                <h3>Vinos Blancos</h3>
+                <p>Frescura, acidez equilibrada y aromas florales inolvidables.</p>
+                <a href="#" style="color: var(--gold); text-decoration: none; font-weight: bold; margin-top: 15px; display: inline-block;">Ver Colección →</a>
+            </article>
+
+            <article class="card">
+                <h3>Maridaje Perfecto</h3>
+                <p>Aprende a combinar tus cepas favoritas con la gastronomía ideal.</p>
+                <a href="#" style="color: var(--gold); text-decoration: none; font-weight: bold; margin-top: 15px; display: inline-block;">Leer Guía →</a>
+            </article>
+        </div>
+
+        <!-- SECCIÓN DE NEWSLETTER (SUSCRIPCIÓN) -->
+        <section class="newsletter">
+            <h2>Bodega Privada</h2>
+            <p>Suscríbete para recibir invitaciones a catas exclusivas y preventas de cosechas limitadas.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Escribe tu correo electrónico" required>
+                <br>
+                <button type="submit">Unirme ahora</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer style="text-align: center; padding: 40px; color: var(--wine-light); opacity: 0.7; font-size: 0.9rem;">
+        <p>&copy; 2026 Beyond the Bottle. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
