@@ -1,198 +1,151 @@
-
 :root {
-    --bg: #F5EDE2;        /* beige base */
-    --greige: #CFC6BB;    /* nuevo tono elegante */
+    --bg: #F5EDE2;
+    --greige: #CFC6BB;
     --wine: #6B1E2E;
-    --wine-dark: #4A0F1B;
+    --wine-dark: #2A040C; /* Burdeo más profundo */
     --gold: #C8A24A;
+    --gold-light: #E5C786;
     --text: #2B2B2B;
     --text-soft: #5A4A4A;
+    --fancy-font: 'Pinyon Script', cursive;
 }
 
 /* =========================
-   BASE
+   BASE & PATRÓN
 ========================= */
-
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: var(--text);
     background-color: var(--bg);
-
-    /* ESTAMPADO SUAVE EDITORIAL */
-    background-image:
-        radial-gradient(rgba(107, 30, 46, 0.05) 1px, transparent 1px),
-        radial-gradient(rgba(207, 198, 187, 0.08) 1px, transparent 1px);
-
-    background-size: 28px 28px;
-    background-position: 0 0, 14px 14px;
+    /* Patrón de ilustración suave */
+    background-image: 
+        linear-gradient(rgba(245, 237, 226, 0.94), rgba(245, 237, 226, 0.94)),
+        url('https://www.transparenttextures.com/patterns/pinstripe.png'); 
+    background-attachment: fixed;
 }
 
 /* =========================
-   TITULOS LUJO
+   HERO (EL CAMBIO PRINCIPAL)
 ========================= */
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    letter-spacing: 0.6px;
-}
-
-/* =========================
-   HERO CON IMAGEN
-========================= */
-
 .hero {
-    height: 92vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    background-image:
-        linear-gradient(
-            180deg,
-            rgba(107, 30, 46, 0.78) 0%,
-            rgba(207, 198, 187, 0.65) 55%,
-            var(--bg) 100%
-        ),
-        url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb");
-
+    position: relative;
+    background: linear-gradient(
+                    rgba(42, 4, 12, 0.75), 
+                    rgba(107, 30, 46, 0.55)
+                ), 
+                url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-content h1 {
-    font-size: 72px;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-family: var(--fancy-font);
+    font-size: clamp(80px, 15vw, 160px); /* Tamaño masivo y fluido */
+    margin: 0;
+    line-height: 0.8;
+    /* Efecto Dorado Metalizado */
+    background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 50%, #8A6E2F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 15px rgba(0,0,0,0.5));
+    padding: 20px;
 }
 
 .hero-content p {
-    color: #fff;
-    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: white;
+    font-size: clamp(18px, 4vw, 26px);
+    letter-spacing: 2px;
+    margin-top: -10px;
     opacity: 0.9;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 /* =========================
-   CONTENEDOR
+   CONTENEDOR Y CARDS
 ========================= */
-
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     padding: 80px 20px;
 }
 
-/* =========================
-   CARDS BASE
-========================= */
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--wine);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    background: white;
-    border: 1px solid #e6d7c9;
-    padding: 18px;
-    border-radius: 6px;
-    transition: 0.25s ease;
-    overflow: hidden;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: var(--wine);
-}
-
-/* =========================
-   IMAGENES EN CARDS (CLAVE)
-========================= */
-
-.card img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-/* =========================
-   BOTONES
-========================= */
-
-button {
-    background: var(--wine);
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: 'Inter', sans-serif;
-}
-
-button:hover {
-    background: var(--gold);
-    color: var(--wine-dark);
-}
-
-/* =========================
-   INPUTS
-========================= */
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #d8c7ba;
-    font-family: 'Inter', sans-serif;
-}
-
-/* =========================
-   LINKS TIPOS DE VINO
-========================= */
-
-a.card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--greige);
+    padding: 30px;
     text-decoration: none;
     color: var(--text);
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    transition: 0.4s;
     font-weight: 500;
 }
 
-a.card:hover {
-    color: var(--wine);
+.card:hover {
+    transform: translateY(-10px);
+    background: white;
+    border-color: var(--gold);
 }
 
 /* =========================
-   NEWSLETTER
+   NEWSLETTER PREMIUM
 ========================= */
-
 .newsletter {
+    background: var(--wine-dark);
+    padding: 80px 20px;
+    color: white;
     text-align: center;
-    margin-top: 80px;
+    margin: 60px 0;
 }
 
-/* =========================
-   CRÍTICAS
-========================= */
+.newsletter h2 { color: var(--gold); }
 
-#criticas {
-    margin-top: 30px;
+.newsletter input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--gold);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    outline: none;
 }
 
-/* =========================
-   UTILIDADES
-========================= */
-
-.soft {
-    color: var(--text-soft);
+button {
+    background: var(--gold);
+    color: var(--wine-dark);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.accent {
-    color: var(--wine);
+button:hover {
+    background: white;
+    letter-spacing: 1px;
 }
