@@ -1,66 +1,100 @@
 
+/* =========================
+   NEWSLETTER (BASE DE USUARIOS)
+========================= */
+
 let newsletter = [];
+
+/* cargar datos si existen */
+function initNewsletter() {
+    let data = localStorage.getItem("newsletter");
+    if (data) {
+        newsletter = JSON.parse(data);
+    }
+}
+
+/* suscripción */
+function suscribirseNewsletter() {
+
+    let nombre = document.getElementById("nombreCompleto");
+    let email = document.getElementById("email");
+
+    if (!nombre || !email) return;
+
+    let nombreValue = nombre.value.trim();
+    let emailValue = email.value.trim();
+
+    if (nombreValue === "" || emailValue === "") {
+        alert("Completa todos los campos");
+        return;
+    }
+
+    if (!emailValue.includes("@")) {
+        alert("Correo inválido");
+        return;
+    }
+
+    newsletter.push({
+        nombre: nombreValue,
+        email: emailValue
+    });
+
+    localStorage.setItem("newsletter", JSON.stringify(newsletter));
+
+    nombre.value = "";
+    email.value = "";
+
+    alert("Suscripción registrada correctamente");
+}
+
+
+/* =========================
+   CRÍTICAS DE EXPERTOS (EDITORIAL)
+========================= */
 
 let criticas = [
     {
         autor: "Robert Parker",
-        texto: "El equilibrio entre fruta, estructura y evolución define un gran vino."
+        texto: "El equilibrio entre estructura, fruta y evolución define un gran vino."
     },
     {
         autor: "Jancis Robinson",
-        texto: "El vino es una de las expresiones más puras del territorio."
+        texto: "El vino es una expresión honesta del territorio y su historia."
     },
     {
         autor: "James Suckling",
-        texto: "La autenticidad se reconoce en la coherencia sensorial."
+        texto: "La autenticidad de un vino se percibe en su coherencia sensorial."
     }
 ];
 
-/* EXPERTOS */
-
+/* render de críticas */
 function mostrarCriticas() {
+
     let contenedor = document.getElementById("criticas");
     if (!contenedor) return;
 
-    criticas.forEach(c => {
-        let div = document.createElement("div");
-        div.className = "card";
+    contenedor.innerHTML = "";
 
-        div.innerHTML = `
+    criticas.forEach((c) => {
+
+        let card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
             <h3>${c.autor}</h3>
             <p>${c.texto}</p>
         `;
 
-        contenedor.appendChild(div);
+        contenedor.appendChild(card);
     });
 }
 
-/* NEWSLETTER */
 
-function suscribirseNewsletter() {
-
-    let nombre = document.getElementById("nombreCompleto").value;
-    let email = document.getElementById("email").value;
-
-    if (!nombre || !email) return alert("Completa los campos");
-    if (!email.includes("@")) return alert("Email inválido");
-
-    newsletter.push({ nombre, email });
-
-    localStorage.setItem("newsletter", JSON.stringify(newsletter));
-
-    document.getElementById("nombreCompleto").value = "";
-    document.getElementById("email").value = "";
-
-    alert("Registro exitoso");
-}
-
-/* INIT */
+/* =========================
+   INICIALIZACIÓN GLOBAL
+========================= */
 
 window.onload = function () {
-
-    let data = localStorage.getItem("newsletter");
-    if (data) newsletter = JSON.parse(data);
-
+    initNewsletter();
     mostrarCriticas();
 };
