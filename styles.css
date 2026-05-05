@@ -68,12 +68,17 @@ h2::after {
     text-align: center;
     position: relative;
     
-    /* Imagen de fondo de alta calidad */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(74, 15, 27, 0.4)), 
+    /* CAMBIO AQUÍ: Degradado Burdeo más intenso */
+    background: linear-gradient(
+                    rgba(42, 4, 12, 0.7), /* Burdeo muy oscuro arriba */
+                    rgba(107, 30, 46, 0.5) /* Tono vino en el centro */
+                ), 
                 url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80');
+    
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efecto Parallax */
+    background-attachment: fixed;
+}
 }
 
 .hero-content h1 {
