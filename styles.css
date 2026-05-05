@@ -1,28 +1,36 @@
+/* =========================
+   VARIABLES
+========================= */
 :root {
     --bg: #F5EDE2;
     --greige: #CFC6BB;
     --wine: #6B1E2E;
     --wine-dark: #2A040C; 
     --gold: #C8A24A;
-    --gold-light: #E5C786;
+    --gold-light: #F0D9A7; /* Un poco más brillante para Monsieur */
     --text: #2B2B2B;
     --text-soft: #5A4A4A;
-    --fancy-font: 'Pinyon Script', cursive;
+    --fancy-font: 'Monsieur La Doulaise', cursive;
 }
 
+/* =========================
+   BASE & PATRÓN
+========================= */
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Inter', sans-serif;
     color: var(--text);
     background-color: var(--bg);
-    /* Patrón de ilustración suave de fondo */
     background-image: 
         linear-gradient(rgba(245, 237, 226, 0.94), rgba(245, 237, 226, 0.94)),
         url('https://www.transparenttextures.com/patterns/pinstripe.png'); 
     background-attachment: fixed;
 }
 
-/* HERO CON DEGRADADO BURDEO */
+/* =========================
+   HERO (LOOK ARISTOCRÁTICO)
+========================= */
 .hero {
     height: 100vh;
     display: flex;
@@ -40,28 +48,46 @@ body {
     background-attachment: fixed;
 }
 
+.hero-content {
+    width: 95%;
+    max-width: 1200px;
+}
+
 .hero-content h1 {
     font-family: var(--fancy-font);
-    font-size: clamp(80px, 15vw, 150px);
+    /* Esta fuente es muy esbelta, por lo que necesita buen tamaño */
+    font-size: clamp(100px, 15vw, 170px); 
+    font-weight: 400;
     margin: 0;
-    line-height: 0.8;
-    /* Dorado Metalizado */
-    background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 50%, #8A6E2F 100%);
+    
+    /* Padding generoso para sus florituras largas */
+    padding: 0.35em 0.1em;
+    line-height: 0.7;
+    display: inline-block;
+
+    /* Dorado Bronceado */
+    background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 40%, #7A5C1F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 4px 15px rgba(0,0,0,0.5));
+    
+    filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.4));
 }
 
 .hero-content p {
     font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-style: normal; /* Cambiado a normal para el look de mayúsculas */
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Mucho espacio para elegancia máxima */
     color: white;
-    font-size: clamp(18px, 3vw, 24px);
-    letter-spacing: 1px;
-    margin-top: 10px;
+    font-size: clamp(14px, 2vw, 18px);
+    margin-top: -35px; /* Ajuste para que se vea cerca de la caligrafía */
+    opacity: 0.85;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-/* CONTENEDOR */
+/* =========================
+   CONTENEDOR Y SECCIONES
+========================= */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -73,67 +99,91 @@ h2 {
     color: var(--wine);
     text-align: center;
     font-size: 2.2rem;
+    margin-bottom: 40px;
 }
 
-/* CARDS */
+/* =========================
+   CARDS CON EFECTO CRISTAL
+========================= */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 18px;
+    gap: 20px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
     border: 1px solid var(--greige);
-    padding: 25px;
-    border-radius: 4px;
-    transition: 0.4s;
+    padding: 35px;
     text-decoration: none;
     color: var(--text);
     text-align: center;
-    font-weight: 500;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 2px;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: var(--gold);
     background: white;
+    box-shadow: 0 15px 35px rgba(107, 30, 46, 0.08);
 }
 
-/* NEWSLETTER */
+/* =========================
+   NEWSLETTER
+========================= */
 .newsletter {
     background: var(--wine-dark);
-    padding: 60px 40px;
+    padding: 80px 30px;
     color: white;
     text-align: center;
-    margin-top: 80px;
-    border-radius: 8px;
+    margin: 100px 0;
+    border-radius: 0px; /* Bordes rectos para look editorial */
 }
 
-.newsletter h2 { color: var(--gold); margin-bottom: 20px; }
+.newsletter h2 { color: var(--gold); }
 
 .newsletter input {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid var(--gold);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--gold);
     color: white;
     padding: 12px;
-    margin: 10px;
+    margin: 15px;
     width: 250px;
+    outline: none;
 }
 
-/* BOTÓN */
+/* =========================
+   BOTONES
+========================= */
 button {
     background: var(--gold);
     color: var(--wine-dark);
-    border: none;
-    padding: 12px 30px;
+    border: 1px solid var(--gold);
+    padding: 15px 40px;
     font-weight: 700;
+    text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 button:hover {
-    background: white;
+    background: transparent;
+    color: var(--gold);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 85px;
+    }
+    .hero-content p {
+        letter-spacing: 2px;
+        margin-top: -20px;
+    }
 }
