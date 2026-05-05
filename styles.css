@@ -7,21 +7,28 @@
     --gold-light: #E5C786;
     --text: #2B2B2B;
     --text-soft: #5A4A4A;
-    --fancy-font: 'Pinyon Script', cursive;
+    /* Cambio a Alex Brush */
+    --fancy-font: 'Alex Brush', cursive;
 }
 
+/* =========================
+   BASE & PATRÓN
+========================= */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: var(--text);
     background-color: var(--bg);
+    /* Patrón de ilustración suave */
     background-image: 
         linear-gradient(rgba(245, 237, 226, 0.94), rgba(245, 237, 226, 0.94)),
         url('https://www.transparenttextures.com/patterns/pinstripe.png'); 
     background-attachment: fixed;
 }
 
-/* HERO CORREGIDO */
+/* =========================
+   HERO (EL CORAZÓN DE LA WEB)
+========================= */
 .hero {
     height: 100vh;
     display: flex;
@@ -29,7 +36,10 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(42, 4, 12, 0.75), rgba(107, 30, 46, 0.55)), 
+    background: linear-gradient(
+                    rgba(42, 4, 12, 0.75), 
+                    rgba(107, 30, 46, 0.55)
+                ), 
                 url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
     background-position: center;
@@ -37,36 +47,42 @@ body {
 }
 
 .hero-content {
-    width: 90%;
-    max-width: 1200px;
+    width: 95%;
 }
 
 .hero-content h1 {
     font-family: var(--fancy-font);
-    font-size: clamp(80px, 12vw, 150px);
+    font-size: clamp(90px, 15vw, 175px); /* Un poco más grande al ser fuente delgada */
+    font-weight: 400;
     margin: 0;
-    /* Padding esencial para que no se corten los trazos caligráficos */
-    padding: 0.2em 0; 
-    line-height: 1.2;
+    
+    /* EL ARREGLO: Padding para evitar recortes en fuentes script */
+    padding: 0.25em 0.1em;
+    line-height: 0.9;
+    display: inline-block;
+
+    /* Dorado Metalizado */
     background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 50%, #8A6E2F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Drop shadow para legibilidad */
-    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
-    display: inline-block;
+    
+    /* Sombra para que resalte sobre el burdeo */
+    filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5));
 }
 
 .hero-content p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: white;
-    font-size: clamp(18px, 3vw, 24px);
-    letter-spacing: 1px;
-    margin-top: 0;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    font-size: clamp(18px, 4vw, 26px);
+    letter-spacing: 1.5px;
+    margin-top: -10px; /* Ajuste para acercarlo al título */
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
-/* RESTO DE ESTILOS */
+/* =========================
+   CONTENEDOR Y SECCIONES
+========================= */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -78,59 +94,88 @@ h2 {
     color: var(--wine);
     text-align: center;
     font-size: 2.2rem;
+    margin-bottom: 40px;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 18px;
+    gap: 20px;
 }
 
 .card {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
     border: 1px solid var(--greige);
-    padding: 25px;
-    transition: 0.4s;
+    padding: 30px;
     text-decoration: none;
     color: var(--text);
     text-align: center;
+    transition: 0.4s ease;
+    border-radius: 4px;
 }
 
 .card:hover {
     transform: translateY(-8px);
     border-color: var(--gold);
     background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
+/* =========================
+   NEWSLETTER
+========================= */
 .newsletter {
     background: var(--wine-dark);
-    padding: 60px 40px;
+    padding: 70px 30px;
     color: white;
     text-align: center;
     margin: 80px 0;
+    border-radius: 8px;
 }
 
 .newsletter h2 { color: var(--gold); }
 
 .newsletter input {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--gold);
     color: white;
     padding: 12px;
     margin: 10px;
-    width: 250px;
+    width: 260px;
+    outline: none;
 }
 
+.newsletter input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================
+   BOTÓN
+========================= */
 button {
     background: var(--gold);
     color: var(--wine-dark);
     border: none;
-    padding: 12px 30px;
+    padding: 14px 35px;
     font-weight: 700;
+    text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-button:hover { background: white; }
+button:hover {
+    background: white;
+    color: var(--wine);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 75px;
+        padding-top: 0.4em;
+    }
+}
