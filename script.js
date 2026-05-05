@@ -1,100 +1,49 @@
 
-/* =========================
-   NEWSLETTER (BASE DE USUARIOS)
-========================= */
+function suscribir() {
+    let nombre = document.getElementById("nombre").value;
+    let correo = document.getElementById("correo").value;
 
-let newsletter = [];
-
-/* cargar datos si existen */
-function initNewsletter() {
-    let data = localStorage.getItem("newsletter");
-    if (data) {
-        newsletter = JSON.parse(data);
-    }
-}
-
-/* suscripción */
-function suscribirseNewsletter() {
-
-    let nombre = document.getElementById("nombreCompleto");
-    let email = document.getElementById("email");
-
-    if (!nombre || !email) return;
-
-    let nombreValue = nombre.value.trim();
-    let emailValue = email.value.trim();
-
-    if (nombreValue === "" || emailValue === "") {
-        alert("Completa todos los campos");
+    if (!nombre || !correo) {
+        alert("Completa los campos");
         return;
     }
 
-    if (!emailValue.includes("@")) {
-        alert("Correo inválido");
-        return;
-    }
-
-    newsletter.push({
-        nombre: nombreValue,
-        email: emailValue
-    });
-
-    localStorage.setItem("newsletter", JSON.stringify(newsletter));
-
-    nombre.value = "";
-    email.value = "";
-
-    alert("Suscripción registrada correctamente");
+    alert("Suscripción exitosa 🍷");
 }
 
-
 /* =========================
-   CRÍTICAS DE EXPERTOS (EDITORIAL)
+   CRÍTICAS DE EXPERTOS
 ========================= */
 
 let criticas = [
     {
         autor: "Robert Parker",
-        texto: "El equilibrio entre estructura, fruta y evolución define un gran vino."
+        texto: "Un vino de estructura impecable, con profundidad y equilibrio notable."
     },
     {
         autor: "Jancis Robinson",
-        texto: "El vino es una expresión honesta del territorio y su historia."
+        texto: "Elegancia y precisión aromática, con una expresión territorial clara."
     },
     {
         autor: "James Suckling",
-        texto: "La autenticidad de un vino se percibe en su coherencia sensorial."
+        texto: "Intensidad controlada y final largo, muy bien construido."
     }
 ];
 
-/* render de críticas */
 function mostrarCriticas() {
-
     let contenedor = document.getElementById("criticas");
-    if (!contenedor) return;
 
-    contenedor.innerHTML = "";
+    criticas.forEach(c => {
+        let div = document.createElement("div");
+        div.className = "card";
 
-    criticas.forEach((c) => {
-
-        let card = document.createElement("div");
-        card.className = "card";
-
-        card.innerHTML = `
-            <h3>${c.autor}</h3>
+        div.innerHTML = `
+            <p><strong>${c.autor}</strong></p>
             <p>${c.texto}</p>
         `;
 
-        contenedor.appendChild(card);
+        contenedor.appendChild(div);
     });
 }
 
-
-/* =========================
-   INICIALIZACIÓN GLOBAL
-========================= */
-
-window.onload = function () {
-    initNewsletter();
-    mostrarCriticas();
-};
+mostrarCriticas();
