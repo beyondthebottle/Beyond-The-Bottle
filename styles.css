@@ -1,7 +1,7 @@
 :root {
     /* --- CAMBIA LA FUENTE AQUÍ --- */
     /* Opciones: 'Italianno', 'Birthstone', 'Meie Script' */
-    --fancy-font: 'Meie Scriptqw', cursive; 
+    --fancy-font: 'Meie Script', cursive; 
     
     --wine-dark: #2A040C; 
     --gold: #C8A24A;
