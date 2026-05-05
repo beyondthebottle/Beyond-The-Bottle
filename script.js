@@ -1,41 +1,23 @@
-let newsletterEmails = [];
-
 let criticas = [
     {
         autor: "Robert Parker",
-        texto: "Un gran vino debe tener equilibrio, estructura y persistencia."
+        texto: "Un gran vino equilibra estructura, profundidad y persistencia."
     },
     {
         autor: "Jancis Robinson",
-        texto: "La calidad del vino está en su coherencia con su origen."
+        texto: "El vino expresa su origen con mayor honestidad que cualquier otra bebida."
     },
     {
         autor: "James Suckling",
-        texto: "El vino auténtico expresa su territorio sin explicaciones."
+        texto: "La autenticidad del vino está en su capacidad de reflejar el terroir."
     }
 ];
 
-/* ---------------- NEWSLETTER ---------------- */
-
-function suscribirseNewsletter() {
-    let email = document.getElementById("email").value;
-
-    if (!email.includes("@")) {
-        alert("Correo inválido");
-        return;
-    }
-
-    newsletterEmails.push(email);
-    localStorage.setItem("newsletter", JSON.stringify(newsletterEmails));
-
-    document.getElementById("email").value = "";
-    alert("Suscripción realizada");
-}
-
-/* ---------------- CRÍTICOS ---------------- */
-
 function mostrarCriticas() {
     let contenedor = document.getElementById("criticas");
+
+    if (!contenedor) return;
+
     contenedor.innerHTML = "";
 
     criticas.forEach(c => {
@@ -51,29 +33,6 @@ function mostrarCriticas() {
     });
 }
 
-/* ---------------- RESET SISTEMA ---------------- */
-
-function reiniciarSistema() {
-
-    let confirmar = confirm("Se eliminarán todos los datos. ¿Continuar?");
-
-    if (!confirmar) return;
-
-    localStorage.clear();
-
-    newsletterEmails = [];
-
-    document.getElementById("email").value = "";
-    document.getElementById("criticas").innerHTML = "";
-
-    alert("Sistema reiniciado");
-}
-
-/* ---------------- INICIO ---------------- */
-
 window.onload = function () {
-    let data = localStorage.getItem("newsletter");
-    if (data) newsletterEmails = JSON.parse(data);
-
     mostrarCriticas();
 };
