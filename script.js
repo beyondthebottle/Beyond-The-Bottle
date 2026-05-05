@@ -129,3 +129,4 @@ window.onload = function () {
 
     mostrarCriticas();
 };
+localStorage.removeItem("resenas");
