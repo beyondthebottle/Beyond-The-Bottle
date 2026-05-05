@@ -26,13 +26,6 @@ a {
     text-decoration: none;
 }
 
-.back {
-    display: inline-block;
-    margin: 20px;
-    font-size: 14px;
-    opacity: 0.7;
-}
-
 /* =========================
    HERO HOME
 ========================= */
@@ -40,11 +33,12 @@ a {
 .hero {
     height: 90vh;
     background: linear-gradient(
-        rgba(10,5,8,0.7),
+        rgba(10,5,8,0.75),
         rgba(10,5,8,0.95)
     ),
     url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3')
-    center/cover;
+    center/cover no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,20 +51,20 @@ a {
 }
 
 .hero-content p {
-    opacity: 0.8;
-    max-width: 500px;
+    max-width: 520px;
     margin: auto;
+    opacity: 0.8;
 }
 
 .tag {
     font-size: 11px;
     letter-spacing: 3px;
-    opacity: 0.6;
     text-transform: uppercase;
+    opacity: 0.6;
 }
 
 /* =========================
-   CONTENEDOR
+   CONTENEDOR GENERAL
 ========================= */
 
 .container {
@@ -89,7 +83,7 @@ a {
 }
 
 /* =========================
-   GRID VINOS
+   GRID DE VINOS
 ========================= */
 
 .cards {
@@ -108,9 +102,9 @@ a {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-color: #c9a3b3;
-    background: rgba(201,163,179,0.05);
+    background: rgba(201,163,179,0.06);
 }
 
 /* =========================
@@ -124,7 +118,7 @@ a {
 
 .newsletter input {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     padding: 12px;
     margin: 6px 0;
     background: #1a1216;
@@ -139,7 +133,7 @@ a {
     background: transparent;
     color: #f1e9e5;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .newsletter button:hover {
@@ -168,11 +162,12 @@ a {
 .wine-hero-tinto {
     height: 55vh;
     background: linear-gradient(
-        rgba(40,0,10,0.7),
+        rgba(40,0,10,0.75),
         rgba(10,5,8,0.95)
     ),
     url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb')
-    center/cover;
+    center/cover no-repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,12 +178,8 @@ a {
     font-size: 64px;
 }
 
-.hero-text p {
-    opacity: 0.8;
-}
-
 /* =========================
-   VINO CONTAINER
+   CONTENIDO VINO
 ========================= */
 
 .wine-container {
@@ -196,10 +187,6 @@ a {
     margin: auto;
     padding: 60px 20px;
 }
-
-/* =========================
-   TEXTO INTRO
-========================= */
 
 .wine-intro {
     font-size: 18px;
@@ -220,7 +207,6 @@ a {
     margin-bottom: 50px;
 }
 
-/* DARK SECTIONS */
 .dark {
     background: #12070b;
     padding: 30px;
@@ -246,6 +232,7 @@ a {
     height: 4px;
     background: #7a1f2b;
     margin: 6px 0;
+    border-radius: 2px;
 }
 
 .bar.light { width: 30%; }
@@ -284,37 +271,29 @@ a {
 }
 
 /* =========================
-   IMÁGENES CONTROLADAS (LUJO)
+   IMÁGENES CONTROLADAS (CLAVE)
 ========================= */
 
 .sensorial-card img {
     width: 100%;
-    height: 140px;              /* clave: evita imágenes gigantes */
-    object-fit: cover;          /* recorte elegante */
+    height: 140px;
+    object-fit: cover;
     border-radius: 6px;
     margin-bottom: 10px;
     filter: contrast(1.05) saturate(0.95);
 }
 
-/* imagen principal del vino */
 .wine-image img {
     width: 100%;
-    height: 280px;              /* antes era libre → ahora controlado */
+    height: 280px;
     object-fit: cover;
     border-radius: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-/* mejora visual general */
-.sensorial-card {
-    overflow: hidden;
-    background: #1a0d12;
-    border: 1px solid #3a1a22;
-    padding: 12px;
-    transition: 0.3s ease;
-}
-
+/* hover elegante */
 .sensorial-card:hover {
     transform: translateY(-4px);
     border-color: #7a1f2b;
+    transition: 0.3s ease;
 }
