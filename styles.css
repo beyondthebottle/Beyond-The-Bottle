@@ -1,159 +1,117 @@
-/* RESET */
+
+/* BASE */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #f5f2ef;
-    color: #2c2c2c;
+    background: #0f0a0c;
+    color: #e8e6e3;
 }
 
-/* ========================= */
-/* HERO PREMIUM (PORTADA) */
-/* ========================= */
-
+/* HERO */
 .hero {
     height: 90vh;
-    background-image: url("https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3') center/cover no-repeat;
     position: relative;
 }
 
-/* CAPA OSCURA */
 .hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background: linear-gradient(
-        rgba(60, 0, 30, 0.75),
-        rgba(20, 0, 10, 0.9)
-    );
-
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 5, 8, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* TEXTO HERO */
-.hero-content {
     text-align: center;
-    color: white;
-    padding: 20px;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 72px;
+    font-size: 60px;
     margin: 0;
-    letter-spacing: 2px;
 }
 
 .hero-content p {
-    font-size: 20px;
-    margin-top: 15px;
-    opacity: 0.9;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
-/* ========================= */
-/* CONTENIDO */
-/* ========================= */
+.btn-hero {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid #c9a3b3;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+}
 
+/* CONTENEDOR */
 .container {
-    width: 85%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
-    margin-top: 60px;
+    padding: 60px 20px;
 }
 
-/* GRID ESCRITORIO */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-/* TITULOS */
+/* TIPOGRAFÍA */
 h2 {
     font-family: 'Playfair Display', serif;
-    color: #5a0f2e;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* TARJETAS */
+h3 {
+    font-family: 'Inter', sans-serif;
+}
+
+/* BLOQUES */
+.block {
+    margin-bottom: 60px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin-top: 15px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+    background: #1a1216;
+    padding: 15px;
+    border: 1px solid #2a1b22;
 }
 
-/* HOVER */
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 15px 35px rgba(0,0,0,0.12);
+/* TABLA */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla td, .tabla th {
+    border: 1px solid #2a1b22;
+    padding: 10px;
 }
 
 /* INPUTS */
-input, textarea {
+input {
+    padding: 10px;
     width: 100%;
-    margin-top: 10px;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 14px;
+    margin-bottom: 10px;
+    background: #1a1216;
+    border: 1px solid #2a1b22;
+    color: white;
 }
 
 /* BOTONES */
 button {
-    margin-top: 12px;
-    padding: 12px;
-    width: 100%;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(135deg, #5a0f2e, #7a1b44);
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid #c9a3b3;
     color: white;
-    font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-button:hover {
-    transform: scale(1.03);
-    background: linear-gradient(135deg, #7a1b44, #9c2a5a);
-}
-
-/* IA */
-#resultadoIA {
+/* RESET */
+.reset-btn {
     margin-top: 15px;
-    font-style: italic;
-    color: #5a0f2e;
+    border: 1px solid #7a1f2b;
 }
-
-/* RESEÑAS */
-#contenedorResenas .card {
-    margin-top: 15px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero {
-        height: 55vh;
-    }
-
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .container {
-        width: 90%;
-    }
-} 
