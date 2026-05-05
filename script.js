@@ -1,17 +1,20 @@
+/* =========================
+   Suscripción
+========================= */
 function suscribir() {
     let nombre = document.getElementById("nombre").value;
     let correo = document.getElementById("correo").value;
 
     if (!nombre || !correo) {
-        alert("Completa los campos");
+        alert("Por favor, completa tus datos para la experiencia Beyond the Bottle 🍷");
         return;
     }
 
-    alert("Suscripción exitosa 🍷");
+    alert(`¡Bienvenido/a ${nombre}! Pronto recibirás contenido exclusivo en tu correo.`);
 }
 
 /* =========================
-   CRÍTICAS DE EXPERTOS
+   Críticas Dinámicas
 ========================= */
 let criticas = [
     {
@@ -35,15 +38,13 @@ function mostrarCriticas() {
     criticas.forEach(c => {
         let div = document.createElement("div");
         div.className = "card";
-
         div.innerHTML = `
-            <p><strong style="color:var(--wine);">${c.autor}</strong></p>
-            <p style="font-style:italic;">"${c.texto}"</p>
+            <p><strong style="color:var(--wine); font-family:'Playfair Display'; font-size:1.2rem;">${c.autor}</strong></p>
+            <p style="font-style:italic; color:var(--text-soft);">"${c.texto}"</p>
         `;
-
         contenedor.appendChild(div);
     });
 }
 
-// Aseguramos que las críticas se carguen al iniciar
+// Ejecutar al cargar la página
 window.onload = mostrarCriticas;
