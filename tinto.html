@@ -1,216 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Vino Tinto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vino Tinto | Beyond the Bottle</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Cormorant:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<a class="back" href="index.html">← Volver</a>
-
-<header class="hero">
+<!-- HERO -->
+<header class="hero hero-tinto">
     <div class="hero-content">
         <h1>Vino Tinto</h1>
-        <p>Estructura, identidad y expresión del territorio</p>
+        <p>Intensidad, estructura y profundidad aromática</p>
     </div>
 </header>
 
-<main class="wine-container">
+<main class="container">
 
-<!-- =========================
-     INTRO PROFUNDA
-========================= -->
+    <!-- DESCRIPCIÓN -->
+    <section class="info-section">
+        <h2>Descripción general</h2>
+        <p>
+            El vino tinto se caracteriza por su estructura, complejidad y capacidad de evolución.
+            Se elabora a partir de uvas tintas fermentadas con sus pieles, lo que aporta color,
+            taninos y una amplia gama de aromas.
+        </p>
+        <p>
+            Su perfil puede variar desde vinos ligeros y frutales hasta opciones intensas,
+            especiadas y con gran potencial de guarda.
+        </p>
+    </section>
 
-<section>
+    <!-- CARACTERÍSTICAS -->
+    <section class="grid-3">
+        <div class="card">
+            <h3>🍇 Aromas</h3>
+            <p>Frutas rojas, negras, especias, cacao, cuero y notas tostadas.</p>
+        </div>
 
-<h2>Descripción general</h2>
+        <div class="card">
+            <h3>🍷 Cuerpo</h3>
+            <p>Desde ligero (Pinot Noir) hasta robusto (Cabernet Sauvignon).</p>
+        </div>
 
-<p>
-El vino tinto es una de las expresiones más complejas del mundo enológico.
-Se obtiene mediante la fermentación del mosto junto con las pieles de la uva,
-lo que permite extraer color, estructura, taninos y una amplia gama de compuestos aromáticos.
-</p>
+        <div class="card">
+            <h3>⏳ Envejecimiento</h3>
+            <p>Puede evolucionar en botella, desarrollando mayor complejidad.</p>
+        </div>
+    </section>
 
-<p>
-A diferencia de otros estilos, el vino tinto evoluciona en contacto con el oxígeno de forma controlada,
-lo que le permite desarrollar capas de sabor más profundas con el tiempo.
-</p>
+    <!-- CÓMO PROBAR -->
+    <section class="info-section">
+        <h2>Cómo catar un vino tinto</h2>
 
-</section>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Observar</h3>
+                <p>Analiza el color: desde rojo rubí hasta tonos más oscuros y profundos.</p>
+            </div>
 
-<!-- =========================
-     ORIGEN Y PERSONALIDAD
-========================= -->
+            <div class="step">
+                <h3>2. Oler</h3>
+                <p>Identifica aromas frutales, especiados o tostados moviendo ligeramente la copa.</p>
+            </div>
 
-<section>
+            <div class="step">
+                <h3>3. Probar</h3>
+                <p>Evalúa acidez, taninos y cuerpo. Nota cómo evoluciona en boca.</p>
+            </div>
 
-<h2>Origen y carácter</h2>
+            <div class="step">
+                <h3>4. Final</h3>
+                <p>Un buen vino deja un final largo y equilibrado.</p>
+            </div>
+        </div>
+    </section>
 
-<p>
-El carácter del vino tinto depende de tres factores esenciales:
-el clima, la variedad de uva y la crianza.
-En climas cálidos tiende a ser más frutal y alcohólico, mientras que en climas fríos
-presenta mayor acidez y elegancia.
-</p>
+    <!-- MARIDAJE -->
+    <section class="info-section maridaje">
+        <h2>Maridaje ideal</h2>
 
-</section>
+        <div class="grid-3">
+            <div class="card">
+                <h3>🥩 Carnes rojas</h3>
+                <p>Perfecto con carnes a la parrilla, cordero o cortes grasos.</p>
+            </div>
 
-<!-- =========================
-     PERFIL SENSORIAL
-========================= -->
+            <div class="card">
+                <h3>🧀 Quesos curados</h3>
+                <p>Quesos intensos como parmesano o manchego.</p>
+            </div>
 
-<section>
-
-<h2>Perfil sensorial</h2>
-
-<div class="sensorial-grid">
-
-<div class="sensorial-card">
-    <div class="icon">●</div>
-    <h3>Cuerpo</h3>
-    <div class="bar strong"></div>
-    <p>Ligero → Medio → Robusto</p>
-</div>
-
-<div class="sensorial-card">
-    <div class="icon">▲</div>
-    <h3>Acidez</h3>
-    <div class="bar high"></div>
-    <p>Baja → Media → Alta</p>
-</div>
-
-<div class="sensorial-card">
-    <div class="icon">■</div>
-    <h3>Taninos</h3>
-    <div class="bar strong"></div>
-    <p>Suaves → Firmes → Potentes</p>
-</div>
-
-<div class="sensorial-card">
-    <div class="icon">◐</div>
-    <h3>Alcohol</h3>
-    <div class="bar medium"></div>
-    <p>Bajo → Medio → Alto</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     ESTILOS DE TINTO
-========================= -->
-
-<section>
-
-<h2>Principales estilos</h2>
-
-<div class="styles">
-
-<div class="style">
-<h3>Ligeros y frutales</h3>
-<p>Frescos, suaves, de baja estructura. Ideales para consumo diario.</p>
-</div>
-
-<div class="style">
-<h3>Equilibrados</h3>
-<p>Balance entre fruta, acidez y taninos. Versátiles en mesa.</p>
-</div>
-
-<div class="style">
-<h3>Potentes y estructurados</h3>
-<p>Alta concentración, crianza en barrica y gran potencial de guarda.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     AROMAS
-========================= -->
-
-<section>
-
-<h2>Perfil aromático</h2>
-
-<div class="aromas">
-
-<div class="aroma">
-<h3>Frutos rojos</h3>
-<p>Cereza, frambuesa, frutilla</p>
-</div>
-
-<div class="aroma">
-<h3>Frutos negros</h3>
-<p>Mora, ciruela, arándano</p>
-</div>
-
-<div class="aroma">
-<h3>Especias</h3>
-<p>Pimienta, clavo, canela</p>
-</div>
-
-<div class="aroma">
-<h3>Crianza</h3>
-<p>Vainilla, cacao, tabaco, cuero</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     SERVICIO Y TEMPERATURA
-========================= -->
-
-<section class="dark-accent">
-
-<h2>Servicio y consumo</h2>
-
-<p><strong>Temperatura ideal:</strong> 14°C – 18°C</p>
-<p><strong>Decantación:</strong> recomendada en vinos jóvenes estructurados</p>
-<p><strong>Copa:</strong> boca amplia para oxigenación</p>
-
-</section>
-
-<!-- =========================
-     MARIDAJE
-========================= -->
-
-<section>
-
-<h2>Maridaje por intensidad</h2>
-
-<p>
-El vino tinto acompaña alimentos según su estructura:
-</p>
-
-<ul>
-<li><strong>Ligero:</strong> pastas suaves, aves, tapas</li>
-<li><strong>Medio:</strong> carnes blancas, pastas con salsa</li>
-<li><strong>Intenso:</strong> carnes rojas, cordero, quesos curados</li>
-</ul>
-
-</section>
-
-<!-- =========================
-     CIERRE
-========================= -->
-
-<section>
-
-<p>
-El vino tinto no es solo una categoría, sino un espectro sensorial que evoluciona con el tiempo,
-la crianza y la experiencia del consumidor.
-</p>
-
-</section>
+            <div class="card">
+                <h3>🍫 Chocolate</h3>
+                <p>Ideal con chocolate amargo o postres intensos.</p>
+            </div>
+        </div>
+    </section>
 
 </main>
 
