@@ -8,12 +8,11 @@
     --text: #2B2B2B;
     --text-soft: #5A4A4A;
 
-    /* NUEVA FUENTE */
-    --fancy-font: 'Birthstone', cursive;
+    --fancy-font: 'Great Vibes', cursive;
 }
 
 /* =========================
-   BASE & PATRÓN
+   BASE
 ========================= */
 body {
     margin: 0;
@@ -35,7 +34,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
     background: linear-gradient(
                     rgba(42, 4, 12, 0.75), 
                     rgba(107, 30, 46, 0.55)
@@ -46,23 +44,27 @@ body {
     background-attachment: fixed;
 }
 
-/* AJUSTE PRINCIPAL */
 .hero-content {
     max-width: 800px;
 }
 
 .hero-content h1 {
     font-family: var(--fancy-font);
-    font-size: clamp(50px, 10vw, 100px); /* REDUCIDO */
+
+    /* AJUSTE CLAVE PARA ESTA FUENTE */
+    font-size: clamp(70px, 12vw, 130px);
+
     margin: 0;
-    line-height: 1;
-    letter-spacing: 2px;
+    line-height: 1.15;
+
+    /* scripts elegantes necesitan poco espacio entre letras */
+    letter-spacing: 1px;
 
     background: linear-gradient(to bottom, var(--gold-light) 0%, var(--gold) 50%, #8A6E2F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.4));
+    filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.5));
     padding: 10px;
 }
 
@@ -78,7 +80,7 @@ body {
 }
 
 /* =========================
-   CONTENEDOR Y CARDS
+   CONTENIDO
 ========================= */
 .container {
     max-width: 1200px;
